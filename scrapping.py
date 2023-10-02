@@ -5,7 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 
 # Set the path to your ChromeDriver executable
-chrome_driver_path = r"C:\Users\barba\Downloads\chromedriver-win64\chromedriver-win64\chromedriver.exe"
+chrome_driver_path = r"C:\Users\luisk\OneDrive\Ambiente de Trabalho\Programas\chromedriver-win64\chromedriver.exe"
 
 # Create a Chrome webdriver instance
 chrome_options = webdriver.ChromeOptions()
@@ -17,7 +17,7 @@ chrome_service = ChromeService(executable_path=chrome_driver_path)
 # Create a Chrome webdriver instance using the service
 driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 
-metacritic_dataset = pd.read_csv('games_sample.csv')
+metacritic_dataset = pd.read_csv('games_clean.csv')
 
 metacritic_dataset['MetacriticReviews'] = None
 
@@ -46,7 +46,7 @@ for index, row in metacritic_dataset.iterrows():
     number = soup.find("div", class_="c-pageProductReviews_text")
     if (number):
         number = number.get_text().split("Showing ")[1]
-        number = number.split(" Critic Reviews")[0]
+        number = number.split(" Critic Review")[0]
         number = int(number)
         if (number < 5):
             count_max = number
