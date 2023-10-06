@@ -1,5 +1,4 @@
 import pandas as pd
-import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -17,7 +16,7 @@ chrome_service = ChromeService(executable_path=chrome_driver_path)
 # Create a Chrome webdriver instance using the service
 driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 
-metacritic_dataset = pd.read_csv('games_clean.csv')
+metacritic_dataset = pd.read_csv('wikipedia_games.csv')
 
 metacritic_dataset['MetacriticReviews'] = None
 
@@ -76,6 +75,3 @@ for index, row in metacritic_dataset.iterrows():
     
 metacritic_dataset.to_csv("metacritic_games.csv")    
 driver.quit()
-        
-
-
