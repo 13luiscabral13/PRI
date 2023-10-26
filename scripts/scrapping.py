@@ -16,7 +16,7 @@ chrome_service = ChromeService(executable_path=chrome_driver_path)
 # Create a Chrome webdriver instance using the service
 driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 
-metacritic_dataset = pd.read_csv('wikipedia_games.csv')
+metacritic_dataset = pd.read_csv('../datasets/wikipedia_games.csv')
 
 metacritic_dataset['MetacriticReviews'] = None
 
@@ -73,5 +73,5 @@ for index, row in metacritic_dataset.iterrows():
     # Store reviews as list of tuples in the MetacriticReviews column
     metacritic_dataset.at[index, 'MetacriticReviews'] = reviews_list
     
-metacritic_dataset.to_csv("metacritic_games.csv")    
+metacritic_dataset.to_csv("../datasets/metacritic_games.csv")    
 driver.quit()
