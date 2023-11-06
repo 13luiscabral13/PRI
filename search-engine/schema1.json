@@ -21,12 +21,70 @@
                     {"class":"solr.LowerCaseFilterFactory"}
                 ]
             }
+        },
+
+        {
+            "name":"platform",
+            "class":"solr.TextField",
+            "indexAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer":{
+                "tokenizer":{
+                    "class":"solr.StandardTokenizerFactory"
+                },
+                "filters":[
+                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
+                    {"class":"solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+
+        {
+            "name":"release_date",
+            "class":"solr.DatePointField"
+        },
+
+        {
+            "name":"meta_score",
+            "class":"solr.IntPointField"
+        },
+
+        {
+            "name":"user_review",
+            "class":"solr.FloatPointField"
         }
     ],
     "add-field": [
         {
             "name": "title",
             "type": "title",
+            "indexed": true
+        },
+        {
+            "name": "platform",
+            "type": "platform",
+            "indexed": true
+        },
+        {
+            "name": "release_date",
+            "type": "release_date",
+            "indexed": true
+        },
+        {
+            "name": "meta_score",
+            "type": "meta_score",
+            "indexed": true
+        },
+        {
+            "name": "user_review",
+            "type": "user_review",
             "indexed": true
         }
     ]
