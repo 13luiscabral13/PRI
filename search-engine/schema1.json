@@ -1,121 +1,68 @@
 {
 	"add-field-type": [
         {
-            "name":"title",
-            "class":"solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
+            "name": "textfield",
+            "class": "solr.TextField",
+            "indexAnalyzer": {
+                "tokenizer": {
+                    "class": "solr.StandardTokenizerFactory"
                 },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
+                "filters": [
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal": true},
+                    {"class": "solr.LowerCaseFilterFactory"}
                 ]
             },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
+            "queryAnalyzer": {
+                "tokenizer": {
+                    "class": "solr.StandardTokenizerFactory"
                 },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
+                "filters": [
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal": true},
+                    {"class": "solr.LowerCaseFilterFactory"}
                 ]
             }
         },
-
         {
-            "name":"platform",
-            "class":"solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
+            "name": "release_date",
+            "class": "solr.DatePointField"
         },
-
         {
-            "name":"release_date",
-            "class":"solr.DatePointField"
+            "name": "meta_score",
+            "class": "solr.IntPointField"
         },
-
         {
-            "name":"meta_score",
-            "class":"solr.IntPointField"
+            "name": "user_review",
+            "class": "solr.FloatPointField"
         },
-
         {
-            "name":"user_review",
-            "class":"solr.FloatPointField"
-        },
-
-        {
-            "name":"reviewer",
-            "class":"solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
-        },
-
-        {
-            "name":"review",
-            "class":"solr.TextField",
-            "indexAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            },
-            "queryAnalyzer":{
-                "tokenizer":{
-                    "class":"solr.StandardTokenizerFactory"
-                },
-                "filters":[
-                    {"class":"solr.ASCIIFoldingFilterFactory", "preserveOriginal":true},
-                    {"class":"solr.LowerCaseFilterFactory"}
-                ]
-            }
+            "name": "content_type",
+            "class": "solr.TextField"
         }
     ],
     "add-field": [
         {
             "name": "title",
-            "type": "title",
+            "type": "textfield",
+            "indexed": true
+        },
+        {
+            "name": "summary",
+            "type": "textfield",
+            "indexed": true
+        },
+        {
+            "name": "wikipedia",
+            "type": "textfield",
+            "indexed": true
+        },
+        {
+            "name": "genre",
+            "type": "textfield",
             "indexed": true
         },
         {
             "name": "platform",
-            "type": "platform",
+            "type": "textfield",
             "indexed": true
         },
         {
@@ -135,12 +82,17 @@
         },
         {
             "name": "reviewer",
-            "type": "reviewer",
+            "type": "textfield",
             "indexed": true
         },
         {
             "name": "review",
-            "type": "review",
+            "type": "textfield",
+            "indexed": true
+        },
+        {
+            "name": "content_type",
+            "type": "content_type",
             "indexed": true
         }
     ]
