@@ -2,12 +2,18 @@ docker exec gamegalaxy bin/solr delete -c games
 
 docker exec gamegalaxy bin/solr create_core -c games
 
+# Wait for Solr to initialize
+sleep 20
+
 # Insert schema
-curl -X POST -H 'Content-type:application/json'  \
---data-binary "@./schema1.json"  \
-http://localhost:8983/solr/games/schema
+curl -X POST -H 'Content-type:application/json' --data-binary "@./search-engine/schema1.json" http://localhost:8983/solr/games/schema
+
+# Remove automatically created field
+curl -X POST -H 'Content-type: application/json' --data '{
+  "delete-field": {
+    "name": "_nest_path_"
+  }
+}' http://localhost:8983/solr/games/schema
 
 # Populate
-curl -X POST -H 'Content-type:application/json' \
---data-binary "@./games_collection.json" \ 
-http://localhost:8983/solr/games/update?commit=true
+curl -X POST -H 'Content-type:application/json' --data-binary "@./search-engine/games_collection.json" http://localhost:8983/solr/games/update?commit=true
