@@ -1,0 +1,125 @@
+{
+	"add-field-type": [
+        {
+            "name": "shortTextfield",
+            "class": "solr.TextField",
+            "indexAnalyzer": {
+                "tokenizer": {
+                    "class": "solr.StandardTokenizerFactory"
+                },
+                "filters": [
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal": true},
+                    {"class": "solr.LowerCaseFilterFactory"}
+                ]
+            },
+            "queryAnalyzer": {
+                "tokenizer": {
+                    "class": "solr.StandardTokenizerFactory"
+                },
+                "filters": [
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal": true},
+                    {"class": "solr.LowerCaseFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "largeTextfield",
+            "class": "solr.TextField",
+            "indexAnalyzer": {
+                "tokenizer": {
+                    "class": "solr.StandardTokenizerFactory"
+                },
+                "filters": [
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal": true},
+                    {"class": "solr.LowerCaseFilterFactory"},
+                    {"class": "solr.SynonymGraphFilterFactory", "synonyms": "synonyms.txt", "ignoreCase": "true", "expand": "true"},
+                    {"class": "solr.FlattenGraphFilterFactory"}
+                ]
+            },
+            "queryAnalyzer": {
+                "tokenizer": {
+                    "class": "solr.StandardTokenizerFactory"
+                },
+                "filters": [
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal": true},
+                    {"class": "solr.LowerCaseFilterFactory"},
+                    {"class": "solr.SynonymGraphFilterFactory", "synonyms": "synonyms.txt", "ignoreCase": "true", "expand": "true"},
+                    {"class": "solr.FlattenGraphFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "release_date",
+            "class": "solr.DatePointField"
+        },
+        {
+            "name": "meta_score",
+            "class": "solr.IntPointField"
+        },
+        {
+            "name": "user_review",
+            "class": "solr.FloatPointField"
+        },
+        {
+            "name": "content_type",
+            "class": "solr.TextField"
+        }
+    ],
+    "add-field": [
+        {
+            "name": "title",
+            "type": "shortTextfield",
+            "indexed": true
+        },
+        {
+            "name": "summary",
+            "type": "largeTextfield",
+            "indexed": true
+        },
+        {
+            "name": "wikipedia",
+            "type": "largeTextfield",
+            "indexed": true
+        },
+        {
+            "name": "genre",
+            "type": "shortTextfield",
+            "indexed": true
+        },
+        {
+            "name": "platform",
+            "type": "shortTextfield",
+            "indexed": true
+        },
+        {
+            "name": "release_date",
+            "type": "release_date",
+            "indexed": true
+        },
+        {
+            "name": "meta_score",
+            "type": "meta_score",
+            "indexed": true
+        },
+        {
+            "name": "user_review",
+            "type": "user_review",
+            "indexed": true
+        },
+        {
+            "name": "reviewer",
+            "type": "shortTextfield",
+            "indexed": true
+        },
+        {
+            "name": "review",
+            "type": "largeTextfield",
+            "indexed": true
+        },
+        {
+            "name": "content_type",
+            "type": "content_type",
+            "indexed": true
+        }
+    ]
+}
