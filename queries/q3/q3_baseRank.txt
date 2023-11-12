@@ -5,7 +5,12 @@ BASE \\
 Dead Rising 2 \\
 Call of Duty: Black Ops II - Apocalypse \\
 Stubbs the Zombie in Rebel Without a Pulse \\
-Escape Dead Island \\
 Dead Rising 4 \\
+Escape Dead Island \\
+World War Z \\
+Zombie Panic in Wonderland \\
+Zombie Tycoon 2: Brainhov's Revenge \\
+Dead Rising 2: Case Zero \\
+Dead Island: Definitive Collection \\
 \bottomrule
 \end{tabular}

@@ -3,13 +3,14 @@
 BOOSTED \\
 \midrule
 Team Sonic Racing \\
-Plants vs Zombies: Garden Warfare \\
-Crimson Alliance \\
-SpeedRunners \\
-Valhalla Knights 2 \\
-Cake Bash \\
 Crash Team Racing: Nitro-Fueled \\
-Super Monkey Ball: Banana Blitz HD \\
-Dragon Ball: Revenge of King Piccolo \\
+DRiiFT Mania \\
+Driveclub \\
+Ridge Racer V \\
+The Crew \\
+TOCA Race Driver 3 \\
+Sonic & All-Stars Racing Transformed \\
+Urban Trial Freestyle \\
+Gran Turismo 5 \\
 \bottomrule
 \end{tabular}

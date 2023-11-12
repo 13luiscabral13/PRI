@@ -15,7 +15,7 @@ docker cp "$PWD"/search-engine/stopwords.txt gamegalaxy:/var/solr/data/games/con
 docker cp "$PWD"/search-engine/synonyms.txt gamegalaxy:/var/solr/data/games/conf
 
 # Insert schema
-curl -X POST -H 'Content-type:application/json' --data-binary "@./search-engine/schema2.json" http://localhost:8983/solr/games/schema
+curl -X POST -H 'Content-type:application/json' --data-binary "@./search-engine/schema1.json" http://localhost:8983/solr/games/schema
 
 # Populate
 curl -X POST -H 'Content-type:application/json' --data-binary "@./search-engine/games_collection.json" http://localhost:8983/solr/games/update?commit=true

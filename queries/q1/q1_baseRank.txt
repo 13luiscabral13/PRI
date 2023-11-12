@@ -4,12 +4,13 @@ BASE \\
 \midrule
 Team Sonic Racing \\
 Plants vs Zombies: Garden Warfare \\
-Crimson Alliance \\
+Cake Bash \\
 SpeedRunners \\
 Valhalla Knights 2 \\
-Cake Bash \\
+Crimson Alliance \\
 Crash Team Racing: Nitro-Fueled \\
 Super Monkey Ball: Banana Blitz HD \\
-Dragon Ball: Revenge of King Piccolo \\
+Driveclub \\
+TOCA Race Driver 3 \\
 \bottomrule
 \end{tabular}
