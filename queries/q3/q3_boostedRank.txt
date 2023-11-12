@@ -1,0 +1,11 @@
+\begin{tabular}{l}
+\toprule
+BOOSTED \\
+\midrule
+Dead Rising 2 \\
+Call of Duty: Black Ops II - Apocalypse \\
+Stubbs the Zombie in Rebel Without a Pulse \\
+Escape Dead Island \\
+Dead Rising 4 \\
+\bottomrule
+\end{tabular}
