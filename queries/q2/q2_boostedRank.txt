@@ -1,16 +1,16 @@
 \begin{tabular}{l}
 \toprule
-                                         BOOSTED \\
+BOOSTED \\
 \midrule
-                           Thief: Deadly Shadows \\
-                         Project Gotham Racing 3 \\
-                    Terminator 3: The Redemption \\
-                                    Naughty Bear \\
-                          Alien Breed 3: Descent \\
-              Aliens Versus Predator: Extinction \\
-                              TOCA Race Driver 3 \\
-                                 Virtua Tennis 3 \\
+Thief: Deadly Shadows \\
+Project Gotham Racing 3 \\
+Terminator 3: The Redemption \\
+Naughty Bear \\
+Alien Breed 3: Descent \\
+Aliens Versus Predator: Extinction \\
+TOCA Race Driver 3 \\
+Virtua Tennis 3 \\
 Blair Witch Volume II: The Legend of Coffin Rock \\
-                      Starlink: Battle for Atlas \\
+Starlink: Battle for Atlas \\
 \bottomrule
 \end{tabular}
