@@ -1,0 +1,16 @@
+\begin{tabular}{l}
+\toprule
+                                 BASE \\
+\midrule
+                        Dead Rising 2 \\
+                  XCOM: Chimera Squad \\
+                          Apocalipsis \\
+                          Fae Tactics \\
+                         Mad Rat Dead \\
+               The Punisher: No Mercy \\
+        Ori and the Will of the Wisps \\
+             Necrobarista: Final Pour \\
+                      The Incredibles \\
+Tales of Vesperia: Definitive Edition \\
+\bottomrule
+\end{tabular}

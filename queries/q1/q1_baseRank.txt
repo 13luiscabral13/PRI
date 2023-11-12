@@ -1,15 +1,16 @@
 \begin{tabular}{l}
 \toprule
-BASE \\
+                                BASE \\
 \midrule
-Team Sonic Racing \\
-Plants vs Zombies: Garden Warfare \\
-Crimson Alliance \\
-SpeedRunners \\
-Valhalla Knights 2 \\
-Cake Bash \\
-Crash Team Racing: Nitro-Fueled \\
-Super Monkey Ball: Banana Blitz HD \\
-Dragon Ball: Revenge of King Piccolo \\
+                   Team Sonic Racing \\
+Sonic \& All-Stars Racing Transformed \\
+                            The Crew \\
+                           Driveclub \\
+                       Ridge Racer V \\
+                      Super Toy Cars \\
+                  TOCA Race Driver 3 \\
+     Crash Team Racing: Nitro-Fueled \\
+                 R: Racing Evolution \\
+                      Gran Turismo 5 \\
 \bottomrule
 \end{tabular}

@@ -1,15 +1,16 @@
 \begin{tabular}{l}
 \toprule
-BOOSTED \\
+                             BOOSTED \\
 \midrule
-Team Sonic Racing \\
-Plants vs Zombies: Garden Warfare \\
-Crimson Alliance \\
-SpeedRunners \\
-Valhalla Knights 2 \\
-Cake Bash \\
-Crash Team Racing: Nitro-Fueled \\
-Super Monkey Ball: Banana Blitz HD \\
-Dragon Ball: Revenge of King Piccolo \\
+Sonic \& All-Stars Racing Transformed \\
+                   Team Sonic Racing \\
+                            The Crew \\
+                           Driveclub \\
+                       Ridge Racer V \\
+                      Super Toy Cars \\
+                  TOCA Race Driver 3 \\
+     Crash Team Racing: Nitro-Fueled \\
+                 R: Racing Evolution \\
+                      Gran Turismo 5 \\
 \bottomrule
 \end{tabular}
