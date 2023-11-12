@@ -76,7 +76,7 @@
     "add-field": [
         {
             "name": "title",
-            "type": "shortTextfield",
+            "type": "largeTextfield",
             "indexed": true
         },
         {
