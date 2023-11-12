@@ -1,16 +1,16 @@
 \begin{tabular}{l}
 \toprule
-                                BOOSTED \\
+                                   BOOSTED \\
 \midrule
-                          Dead Rising 2 \\
-                    XCOM: Chimera Squad \\
-                            Apocalipsis \\
-                            Fae Tactics \\
-Super Robot Taisen: Original Generation \\
-                           Mad Rat Dead \\
-                 The Punisher: No Mercy \\
-          Ori and the Will of the Wisps \\
-               Necrobarista: Final Pour \\
-                        The Incredibles \\
+                      Disney Magical World \\
+                       XCOM: Chimera Squad \\
+                              Rocket Arena \\
+Conception II: Children of the Seven Stars \\
+                Torment: Tides of Numenera \\
+             Ori and the Will of the Wisps \\
+                              Mad Rat Dead \\
+                    The Punisher: No Mercy \\
+            Chicken Police - Paint it RED! \\
+                           The Incredibles \\
 \bottomrule
 \end{tabular}

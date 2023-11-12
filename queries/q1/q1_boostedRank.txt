@@ -2,15 +2,15 @@
 \toprule
                              BOOSTED \\
 \midrule
-Sonic \& All-Stars Racing Transformed \\
                    Team Sonic Racing \\
-                            The Crew \\
+     Crash Team Racing: Nitro-Fueled \\
+                        DRiiFT Mania \\
                            Driveclub \\
                        Ridge Racer V \\
-                      Super Toy Cars \\
+                            The Crew \\
                   TOCA Race Driver 3 \\
-     Crash Team Racing: Nitro-Fueled \\
-                 R: Racing Evolution \\
+Sonic \& All-Stars Racing Transformed \\
+               Urban Trial Freestyle \\
                       Gran Turismo 5 \\
 \bottomrule
 \end{tabular}

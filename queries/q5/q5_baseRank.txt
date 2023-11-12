@@ -2,15 +2,15 @@
 \toprule
                                  BASE \\
 \midrule
-                        Dead Rising 2 \\
-                  XCOM: Chimera Squad \\
-                          Apocalipsis \\
-                          Fae Tactics \\
                          Mad Rat Dead \\
                The Punisher: No Mercy \\
-        Ori and the Will of the Wisps \\
-             Necrobarista: Final Pour \\
                       The Incredibles \\
+                         Rocket Arena \\
+                 Disney Magical World \\
+                  XCOM: Chimera Squad \\
+                       Chrono Trigger \\
+             Final Fantasy VI Advance \\
 Tales of Vesperia: Definitive Edition \\
+        Ori and the Will of the Wisps \\
 \bottomrule
 \end{tabular}

@@ -2,15 +2,15 @@
 \toprule
                                          BOOSTED \\
 \midrule
-                                          NHL 16 \\
-                                        Flockers \\
-      Stubbs the Zombie in Rebel Without a Pulse \\
-                          Alien Breed 3: Descent \\
-Blair Witch Volume II: The Legend of Coffin Rock \\
-                                Trials Evolution \\
-                    Terminator 3: The Redemption \\
-                                      Skullgirls \\
-                           Monster Hunter: World \\
                            Thief: Deadly Shadows \\
+                         Project Gotham Racing 3 \\
+                    Terminator 3: The Redemption \\
+                                    Naughty Bear \\
+                          Alien Breed 3: Descent \\
+              Aliens Versus Predator: Extinction \\
+                              TOCA Race Driver 3 \\
+                                 Virtua Tennis 3 \\
+Blair Witch Volume II: The Legend of Coffin Rock \\
+                      Starlink: Battle for Atlas \\
 \bottomrule
 \end{tabular}
