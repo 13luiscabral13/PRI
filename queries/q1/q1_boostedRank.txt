@@ -1,0 +1,15 @@
+\begin{tabular}{l}
+\toprule
+BOOSTED \\
+\midrule
+Team Sonic Racing \\
+Plants vs Zombies: Garden Warfare \\
+Crimson Alliance \\
+SpeedRunners \\
+Valhalla Knights 2 \\
+Cake Bash \\
+Crash Team Racing: Nitro-Fueled \\
+Super Monkey Ball: Banana Blitz HD \\
+Dragon Ball: Revenge of King Piccolo \\
+\bottomrule
+\end{tabular}
