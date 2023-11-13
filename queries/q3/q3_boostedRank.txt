@@ -2,10 +2,10 @@
 \toprule
 BOOSTED \\
 \midrule
-Zombie Tycoon 2: Brainhov's Revenge \\
 Zombie Driver: Immortal Edition \\
-Zombie Panic in Wonderland \\
+Zombie Tycoon 2: Brainhov's Revenge \\
 Stubbs the Zombie in Rebel Without a Pulse \\
+Zombie Panic in Wonderland \\
 Dead Rising 2 \\
 World War Z \\
 Resident Evil Outbreak \\

@@ -3,14 +3,14 @@
 BOOSTED \\
 \midrule
 Team Sonic Racing \\
-Crash Team Racing: Nitro-Fueled \\
-DRiiFT Mania \\
+Sno-Cross Championship Racing \\
 Driveclub \\
-Ridge Racer V \\
-The Crew \\
-TOCA Race Driver 3 \\
-Sonic & All-Stars Racing Transformed \\
-Urban Trial Freestyle \\
-Gran Turismo 5 \\
+DRiiFT Mania \\
+Crash Team Racing: Nitro-Fueled \\
+Off-Road Redneck Racing \\
+Micro Machines V4 \\
+F-Zero: Maximum Velocity \\
+Extreme-G \\
+Fatal Inertia \\
 \bottomrule
 \end{tabular}

@@ -5,12 +5,12 @@ BASE \\
 Team Sonic Racing \\
 Plants vs Zombies: Garden Warfare \\
 Cake Bash \\
-SpeedRunners \\
-Valhalla Knights 2 \\
 Crimson Alliance \\
 Crash Team Racing: Nitro-Fueled \\
 Super Monkey Ball: Banana Blitz HD \\
-Driveclub \\
-TOCA Race Driver 3 \\
+SpeedRunners \\
+Valhalla Knights 2 \\
+DiRT 4 \\
+Total Immersion Racing \\
 \bottomrule
 \end{tabular}
