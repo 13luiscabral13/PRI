@@ -1,0 +1,16 @@
+\begin{tabular}{l}
+\toprule
+                                   BOOSTED \\
+\midrule
+                Zombie Panic in Wonderland \\
+       Zombie Tycoon 2: Brainhov's Revenge \\
+Stubbs the Zombie in Rebel Without a Pulse \\
+         Plants vs Zombies: Garden Warfare \\
+           Zombie Driver: Immortal Edition \\
+                             Resident Evil \\
+                             Dead Rising 2 \\
+                    Resident Evil Outbreak \\
+                             Dead Rising 4 \\
+ Land of the Dead: Road to Fiddler's Green \\
+\bottomrule
+\end{tabular}
