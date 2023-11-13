@@ -1,16 +1,16 @@
 \begin{tabular}{l}
 \toprule
-BOOSTED \\
+            BOOSTED \\
 \midrule
-NBA Playgrounds \\
+    NBA Playgrounds \\
+           NBA 2K16 \\
+        NBA Live 19 \\
+        NBA Live 15 \\
+        NBA Live 16 \\
 ESPN NBA Basketball \\
-NBA 2K16 \\
-NBA Live 19 \\
-NBA Live 15 \\
-NBA Live 16 \\
-Disc Jam \\
-WRC 7 \\
-Rocket League \\
-Team Sonic Racing \\
+         Sports Jam \\
+           Disc Jam \\
+             NBA 07 \\
+            NBA 2K3 \\
 \bottomrule
 \end{tabular}
