@@ -69,7 +69,7 @@
             "class": "solr.FloatPointField"
         },
         {
-            "name": "content_type",
+            "name": "reviews",
             "class": "solr.TextField"
         }
     ],
@@ -125,8 +125,8 @@
             "indexed": true
         },
         {
-            "name": "content_type",
-            "type": "content_type",
+            "name": "reviews",
+            "type": "reviews",
             "indexed": true
         }
     ]
