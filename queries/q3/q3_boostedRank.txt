@@ -1,0 +1,16 @@
+\begin{tabular}{l}
+\toprule
+BOOSTED \\
+\midrule
+Zombie Tycoon 2: Brainhov's Revenge \\
+Zombie Driver: Immortal Edition \\
+Zombie Panic in Wonderland \\
+Stubbs the Zombie in Rebel Without a Pulse \\
+Dead Rising 2 \\
+World War Z \\
+Resident Evil Outbreak \\
+Land of the Dead: Road to Fiddler's Green \\
+Dead Island: Definitive Collection \\
+Call of Duty: Black Ops II - Apocalypse \\
+\bottomrule
+\end{tabular}

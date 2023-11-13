@@ -1,0 +1,16 @@
+\begin{tabular}{l}
+\toprule
+BOOSTED \\
+\midrule
+Team Sonic Racing \\
+Crash Team Racing: Nitro-Fueled \\
+DRiiFT Mania \\
+Driveclub \\
+Ridge Racer V \\
+The Crew \\
+TOCA Race Driver 3 \\
+Sonic & All-Stars Racing Transformed \\
+Urban Trial Freestyle \\
+Gran Turismo 5 \\
+\bottomrule
+\end{tabular}
