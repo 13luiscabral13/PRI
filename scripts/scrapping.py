@@ -2,6 +2,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
+import re
 
 # Set the path to your ChromeDriver executable
 chrome_driver_path = r"C:\Users\luisk\OneDrive\Ambiente de Trabalho\Programas\chromedriver-win64\chromedriver.exe"
@@ -19,16 +20,50 @@ driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 metacritic_dataset = pd.read_csv('../datasets/wikipedia_games.csv')
 
 metacritic_dataset['MetacriticReviews'] = None
+existantURL = {
+    "Back to the Future: The Game - Episode I: It's About Time" : "https://www.metacritic.com/game/back-to-the-future-the-game-episode-i-its-abo/",
+    "Bit.Trip Presents...Runner2: Future Legend of Rhythm Alien" : "https://www.metacritic.com/game/bit-trip-presents-runner2-future-legend-of-rhyt/",
+    "Tales From The Borderlands: Episode 3 - Catch A Ride" : "https://www.metacritic.com/game/tales-from-the-borderlands-episode-three-catch-a/",
+    "Pro Cycling Manager Season 2013: Le Tour de France - 100th Edition": "https://www.metacritic.com/game/pro-cycling-manager-season-2013-le-tour-de-france/",
+    "Heroes of Might and Magic: Quest for the Dragon Bone Staff" : "https://www.metacritic.com/game/heroes-of-might-and-magic-quest-for-the-dragon-bo/",
+    "Phoenix Wright: Ace Attorney - Trials and Tribulations": "https://www.metacritic.com/game/phoenix-wright-ace-attorney-trials-and/",
+    "Kingdoms of Amalur: Reckoning - The Legend of Dead Kel" : "https://www.metacritic.com/game/kingdoms-of-amalur-reckoning-the-legend-of-dead/",
+    "Resident Evil: Revelations 2 - Episode 4: Metamorphosis": "https://www.metacritic.com/game/resident-evil-revelations-2-episode-4/",
+    "The Lord of the Rings: The Battle for Middle-Earth II": "https://www.metacritic.com/game/the-lord-of-the-rings-the-battle-for-middle-earth-2006/",
+    "Final Fantasy Crystal Chronicles: My Life as a Darklord": "https://www.metacritic.com/game/final-fantasy-crystal-chronicles-my-life-as-a-dar/",
+    "The Legend of Zelda: Breath of the Wild - The Master Trials": "https://www.metacritic.com/game/the-legend-of-zelda-breath-of-the-wild-the-master/",
+    "The Walking Dead: The Telltale Series - The Final Season Episode 1: Done Running": "https://www.metacritic.com/game/the-walking-dead-the-telltale-series-the-final-2018/",
+    "The Raven: Legacy of a Master Thief - Ancestry of Lies": "https://www.metacritic.com/game/the-raven-legacy-of-a-master-thief-ancestry-of/",
+    "Hearthstone: Heroes of Warcraft - The Grand Tournament" : "https://www.metacritic.com/game/hearthstone-heroes-of-warcraft-the-grand/",
+    "Castlevania Requiem: Symphony of the Night & Rondo of Blood": "https://www.metacritic.com/game/castlevania-requiem-symphony-of-the-night-and/",
+    "Dragon Quest XI S: Echoes of an Elusive Age - Definitive Edition" : "https://www.metacritic.com/game/dragon-quest-xi-s-echoes-of-an-elusive-age/",
+    "Edna & Harvey: The Breakout - 10th Anniversary Edition": "https://www.metacritic.com/game/edna-and-harvey-the-breakout-10th-anniversary/",
+    "Sam & Max: The Devil's Playhouse - Episode 2: The Tomb of Sammun-Mak": "https://www.metacritic.com/game/sam-and-max-the-devils-playhouse-episode-2/",
+    "Gabriel Knight 3: Blood of the Sacred, Blood of the Damned": "https://www.metacritic.com/game/gabriel-knight-3-blood-of-the-sacred-blood-of-th/",
+    "The Chronicles of Narnia: The Lion, The Witch and The Wardrobe": "https://www.metacritic.com/game/the-chronicles-of-narnia-the-lion-the-witch-and/",
+    "Area 51": "https://www.metacritic.com/game/area-51-2005/",
+    "Constantine": "https://www.metacritic.com/game/constantine-2005/",
+    
+}
 
-for index, row in metacritic_dataset.iterrows():    
-    name = row['Title'].lower().replace(" ", "-").replace(":", "").replace("'", "")
-    platform = row['platform'].lower().replace(" ", "-").replace(":", "").replace("'", "")
-    if (platform=="switch"):
-        platform = "nintendo-switch"
-    print(name, ': ', platform)
-    
-    metacritic_url = f'https://www.metacritic.com/game/{name}/critic-reviews/?platform={platform}'
-    
+for index, row in metacritic_dataset.iterrows():
+    name = row['Title']
+    metacritic_url = ""
+    if name in existantURL.keys():
+        platform = row['platform'].lower().replace(" ", "-").replace(":", "").replace("'", "").replace(".", "").replace("/", "")
+        if (platform=="switch"):
+            platform = "nintendo-switch"
+        metacritic_url = existantURL[name] + f'critic-reviews/?platform={platform}'
+    else:
+        name = name.lower().replace(":", "").replace("'", "").replace(".", "").replace("/", "").replace("*", "").replace("(", "").replace(")", "").replace(";", "").replace("&"," and ").replace(",", "").replace("!", "").replace("?", "").replace("-", "").strip()
+        name = re.sub(r'\s+', ' ', name)
+        name = name.replace(' ', '-')
+        platform = row['platform'].lower().replace(" ", "-").replace(":", "").replace("'", "").replace(".", "").replace("/", "")
+        if (platform=="switch"):
+            platform = "nintendo-switch"
+        metacritic_url = f'https://www.metacritic.com/game/{name}/critic-reviews/?platform={platform}'
+            
+    print(name, ': ', platform)    
     print(metacritic_url)
     
     # Load the webpage
@@ -42,6 +77,7 @@ for index, row in metacritic_dataset.iterrows():
     
     soup = BeautifulSoup(page_source, 'html.parser')
     
+    reviews_list = []
     number = soup.find("div", class_="c-pageProductReviews_text")
     if (number):
         number = number.get_text().split("Showing ")[1]
@@ -53,7 +89,6 @@ for index, row in metacritic_dataset.iterrows():
             count_max = max(round(number*0.3), 5)
     
         elements = soup.find_all("div", class_="c-siteReview_main g-inner-spacing-medium")
-        reviews_list = []
 
         count = 0
         for element in elements:
