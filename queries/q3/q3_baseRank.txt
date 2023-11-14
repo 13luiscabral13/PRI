@@ -1,16 +1,16 @@
 \begin{tabular}{l}
 \toprule
-BASE \\
+                                      BASE \\
 \midrule
-Dead Rising 2 \\
-Call of Duty: Black Ops II - Apocalypse \\
+                             Dead Rising 2 \\
+       Zombie Tycoon 2: Brainhov's Revenge \\
+        Dead Island: Definitive Collection \\
+                    Resident Evil Outbreak \\
+   Call of Duty: Black Ops II - Apocalypse \\
 Stubbs the Zombie in Rebel Without a Pulse \\
-Dead Rising 4 \\
-Escape Dead Island \\
-World War Z \\
-Zombie Panic in Wonderland \\
-Zombie Tycoon 2: Brainhov's Revenge \\
-Dead Rising 2: Case Zero \\
-Dead Island: Definitive Collection \\
+                             Dead Rising 4 \\
+                               World War Z \\
+        Dead Rising 4: Frank's Big Package \\
+                Zombie Panic in Wonderland \\
 \bottomrule
 \end{tabular}

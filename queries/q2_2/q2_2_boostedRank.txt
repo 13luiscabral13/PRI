@@ -3,7 +3,6 @@
                                     BOOSTED \\
 \midrule
                       Thief: Deadly Shadows \\
-                   Blacksad: Under the Skin \\
 The Elder Scrolls V: Skyrim Special Edition \\
                     Project Gotham Racing 3 \\
                                  Happy Wars \\
@@ -12,5 +11,6 @@ The Elder Scrolls V: Skyrim Special Edition \\
                  Alone in the Dark: Inferno \\
      Deadly Premonition: The Director's Cut \\
           The Witcher 2: Assassins of Kings \\
+                         Darksiders Genesis \\
 \bottomrule
 \end{tabular}

@@ -2,15 +2,15 @@
 \toprule
                                    BASE \\
 \midrule
-  SOCOM: U.S. Navy SEALs Fireteam Bravo \\
                            Mad Rat Dead \\
-                 The Punisher: No Mercy \\
                            Gears of War \\
                         The Incredibles \\
                          Poison Control \\
-      Final Fantasy X / X-2 HD Remaster \\
-                Dr. Mario: Miracle Cure \\
 Super Robot Taisen: Original Generation \\
                        Birth of America \\
+                   Disney Magical World \\
+                           Rocket Arena \\
+                    XCOM: Chimera Squad \\
+         Captain Toad: Treasure Tracker \\
 \bottomrule
 \end{tabular}

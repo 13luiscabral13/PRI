@@ -1,16 +1,16 @@
 \begin{tabular}{l}
 \toprule
-BOOSTED \\
+                             BOOSTED \\
 \midrule
-Team Sonic Racing \\
-Sno-Cross Championship Racing \\
-Driveclub \\
-DRiiFT Mania \\
-Crash Team Racing: Nitro-Fueled \\
-Off-Road Redneck Racing \\
-Micro Machines V4 \\
-F-Zero: Maximum Velocity \\
-Extreme-G \\
-Fatal Inertia \\
+                   Team Sonic Racing \\
+       Sno-Cross Championship Racing \\
+                   TrackMania (2003) \\
+                           Driveclub \\
+                        DRiiFT Mania \\
+     Crash Team Racing: Nitro-Fueled \\
+Sonic \& All-Stars Racing Transformed \\
+             Off-Road Redneck Racing \\
+                   Micro Machines V4 \\
+            F-Zero: Maximum Velocity \\
 \bottomrule
 \end{tabular}

@@ -3,7 +3,6 @@
                                        BASE \\
 \midrule
                       Thief: Deadly Shadows \\
-                   Blacksad: Under the Skin \\
 The Elder Scrolls V: Skyrim Special Edition \\
                      Alien Breed 3: Descent \\
           The Witcher 2: Assassins of Kings \\
@@ -12,5 +11,6 @@ The Elder Scrolls V: Skyrim Special Edition \\
                    Super Monkey Ball Deluxe \\
          Aliens Versus Predator: Extinction \\
              Special Forces: Nemesis Strike \\
+                         TOCA Race Driver 3 \\
 \bottomrule
 \end{tabular}

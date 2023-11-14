@@ -1,16 +1,16 @@
 \begin{tabular}{l}
 \toprule
-BASE \\
+                                 BASE \\
 \midrule
-Mad Rat Dead \\
-The Punisher: No Mercy \\
-The Incredibles \\
-Rocket Arena \\
-Disney Magical World \\
-XCOM: Chimera Squad \\
-Chrono Trigger \\
-Final Fantasy VI Advance \\
+                         Mad Rat Dead \\
+                      The Incredibles \\
+                         Rocket Arena \\
+                 Disney Magical World \\
+                  XCOM: Chimera Squad \\
+                       Chrono Trigger \\
+             Final Fantasy VI Advance \\
 Tales of Vesperia: Definitive Edition \\
-Ori and the Will of the Wisps \\
+        Ori and the Will of the Wisps \\
+             Necrobarista: Final Pour \\
 \bottomrule
 \end{tabular}

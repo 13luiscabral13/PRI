@@ -1,16 +1,16 @@
 \begin{tabular}{l}
 \toprule
-                                   BOOSTED \\
+                            BOOSTED \\
 \midrule
-                Zombie Panic in Wonderland \\
-       Zombie Tycoon 2: Brainhov's Revenge \\
-Stubbs the Zombie in Rebel Without a Pulse \\
-         Plants vs Zombies: Garden Warfare \\
-           Zombie Driver: Immortal Edition \\
-                             Resident Evil \\
-                             Dead Rising 2 \\
-                    Resident Evil Outbreak \\
-                             Dead Rising 4 \\
- Land of the Dead: Road to Fiddler's Green \\
+Zombie Tycoon 2: Brainhov's Revenge \\
+  Plants vs Zombies: Garden Warfare \\
+                      Dead Rising 2 \\
+ Dead Island: Definitive Collection \\
+             Resident Evil Outbreak \\
+ Dead Rising 4: Frank's Big Package \\
+                        World War Z \\
+            Silent Hill 4: The Room \\
+                       The Last Guy \\
+         Zombie Panic in Wonderland \\
 \bottomrule
 \end{tabular}

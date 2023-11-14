@@ -1,16 +1,16 @@
 \begin{tabular}{l}
 \toprule
-                                      BASE \\
+                               BASE \\
 \midrule
-                             Resident Evil \\
-                        Double Kick Heroes \\
-    Call of Duty: Advanced Warfare - Havoc \\
-                             Dead Rising 2 \\
-                             Dead Rising 4 \\
-        Dead Island: Definitive Collection \\
-Stubbs the Zombie in Rebel Without a Pulse \\
-                    Resident Evil Outbreak \\
-   Call of Duty: Black Ops II - Apocalypse \\
-         Plants vs Zombies: Garden Warfare \\
+                      Dead Rising 2 \\
+ Dead Island: Definitive Collection \\
+             Resident Evil Outbreak \\
+ Dead Rising 4: Frank's Big Package \\
+  Plants vs Zombies: Garden Warfare \\
+                        World War Z \\
+Zombie Tycoon 2: Brainhov's Revenge \\
+                       The Last Guy \\
+                      Resident Evil \\
+                  They Are Billions \\
 \bottomrule
 \end{tabular}

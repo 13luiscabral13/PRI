@@ -5,12 +5,12 @@
                  Team Sonic Racing \\
    Crash Team Racing: Nitro-Fueled \\
                           The Crew \\
+                 TrackMania (2003) \\
                   Crazy Machines 3 \\
           Destruction Derby Arenas \\
-                    Super Toy Cars \\
 Super Monkey Ball: Banana Blitz HD \\
-                Valhalla Knights 2 \\
                    Just Dance 2015 \\
  Plants vs Zombies: Garden Warfare \\
+                         Cake Bash \\
 \bottomrule
 \end{tabular}
