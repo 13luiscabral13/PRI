@@ -1,16 +1,16 @@
 \begin{tabular}{l}
 \toprule
-                                   BOOSTED \\
+BOOSTED \\
 \midrule
-                      Disney Magical World \\
-                       XCOM: Chimera Squad \\
-                              Rocket Arena \\
+Disney Magical World \\
+XCOM: Chimera Squad \\
+Rocket Arena \\
 Conception II: Children of the Seven Stars \\
-                Torment: Tides of Numenera \\
-                              Mad Rat Dead \\
-             Ori and the Will of the Wisps \\
-            Chicken Police - Paint it RED! \\
-                           The Incredibles \\
-                            Chrono Trigger \\
+Torment: Tides of Numenera \\
+Mad Rat Dead \\
+Ori and the Will of the Wisps \\
+Chicken Police - Paint it RED! \\
+The Incredibles \\
+Chrono Trigger \\
 \bottomrule
 \end{tabular}

@@ -1,16 +1,16 @@
 \begin{tabular}{l}
 \toprule
-                              BASE \\
+BASE \\
 \midrule
-                 Team Sonic Racing \\
- Plants vs Zombies: Garden Warfare \\
-                         Cake Bash \\
-                 TrackMania (2003) \\
-                  Crimson Alliance \\
-   Crash Team Racing: Nitro-Fueled \\
+Team Sonic Racing \\
+Plants vs Zombies: Garden Warfare \\
+Cake Bash \\
+TrackMania (2003) \\
+Crimson Alliance \\
+Crash Team Racing: Nitro-Fueled \\
 Super Monkey Ball: Banana Blitz HD \\
-                      SpeedRunners \\
-                            DiRT 4 \\
-            Total Immersion Racing \\
+SpeedRunners \\
+DiRT 4 \\
+Total Immersion Racing \\
 \bottomrule
 \end{tabular}

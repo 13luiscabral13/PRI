@@ -1,16 +1,16 @@
 \begin{tabular}{l}
 \toprule
-                              BASE \\
+BASE \\
 \midrule
-             Thief: Deadly Shadows \\
-      Terminator 3: The Redemption \\
-                      Naughty Bear \\
+Thief: Deadly Shadows \\
+Terminator 3: The Redemption \\
+Naughty Bear \\
 Aliens Versus Predator: Extinction \\
-                TOCA Race Driver 3 \\
-            Alien Breed 3: Descent \\
-                   Virtua Tennis 3 \\
-           Project Gotham Racing 3 \\
-     Tak: The Great Juju Challenge \\
-        Starlink: Battle for Atlas \\
+TOCA Race Driver 3 \\
+Alien Breed 3: Descent \\
+Virtua Tennis 3 \\
+Project Gotham Racing 3 \\
+Tak: The Great Juju Challenge \\
+Starlink: Battle for Atlas \\
 \bottomrule
 \end{tabular}

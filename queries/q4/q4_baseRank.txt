@@ -1,16 +1,16 @@
 \begin{tabular}{l}
 \toprule
-                BASE \\
+BASE \\
 \midrule
-            NBA 2K16 \\
-         NBA Live 19 \\
-             NBA 2K3 \\
-              NBA 07 \\
-         NBA Live 15 \\
-         NBA Live 16 \\
- ESPN NBA Basketball \\
-     NBA Playgrounds \\
-         NBA Live 14 \\
+NBA 2K16 \\
+NBA Live 19 \\
+NBA 2K3 \\
+NBA 07 \\
+NBA Live 15 \\
+NBA Live 16 \\
+ESPN NBA Basketball \\
+NBA Playgrounds \\
+NBA Live 14 \\
 inFamous: Second Son \\
 \bottomrule
 \end{tabular}

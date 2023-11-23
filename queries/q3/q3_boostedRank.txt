@@ -1,16 +1,16 @@
 \begin{tabular}{l}
 \toprule
-                            BOOSTED \\
+BOOSTED \\
 \midrule
 Zombie Tycoon 2: Brainhov's Revenge \\
-                      Dead Rising 2 \\
-            Silent Hill 4: The Room \\
- Dead Island: Definitive Collection \\
-             Resident Evil Outbreak \\
-                        World War Z \\
- Dead Rising 4: Frank's Big Package \\
-                     Cotton Reboot! \\
-                  They Are Billions \\
-         Zombie Panic in Wonderland \\
+Dead Rising 2 \\
+Silent Hill 4: The Room \\
+Dead Island: Definitive Collection \\
+Resident Evil Outbreak \\
+World War Z \\
+Dead Rising 4: Frank's Big Package \\
+Cotton Reboot! \\
+They Are Billions \\
+Zombie Panic in Wonderland \\
 \bottomrule
 \end{tabular}
