@@ -3,7 +3,9 @@ docker stop semantic_gamegalaxy
 docker rm semantic_gamegalaxy
 
 # Create the docker container with the cores
-cat ./search-engine/games_collection.json | python3 ./scripts/get_embeddings.py > ./search-engine/semantic_games.json
+docker run -p 8983:8983 --name semantic_gamegalaxy -d solr:9.3 solr-precreate semantic_games
+
+#cat ./search-engine/games_collection.json | python3 ./scripts/get_embeddings.py > ./search-engine/semantic_games.json
 
 # Wait for Solr to initialize
 sleep 20

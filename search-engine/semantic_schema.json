@@ -73,7 +73,7 @@
             "class": "solr.TextField"
         },
         {
-            "name": "courseVector",
+            "name": "gameVector",
             "class": "solr.DenseVectorField",
             "vectorDimension": 384,
             "similarityFunction": "cosine",
@@ -123,7 +123,7 @@
         },
         {
             "name": "vector",
-            "type": "courseVector",
+            "type": "gameVector",
             "indexed": true,
             "stored": true
         },
