@@ -27,11 +27,13 @@ const ResultsPage = () => {
     const extra = "&rows=1000&useParams=&wt=json";
 
     const link = domain+bq+bqName+op+bqSummary+op+bqWikipedia+op+bqGenre+others+q+qf+extra;
-    console.log("URL: ", link);
-
-    let results_reviews = await fetch(link, { mode: 'cors' });
-
-    console.log("Reviews: ", results_reviews);
+    const encodedLink = encodeURIComponent(link);
+    fetch(`http://localhost:3001/get_games?url=${encodedLink}`)
+    .then(response => response.text())
+    .then(result => {
+      console.log(result); // Output: "Result: 5"
+    })
+    .catch(error => console.error('Error:', error));
   }
 
   processQuery();

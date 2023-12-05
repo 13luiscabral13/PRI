@@ -3,7 +3,12 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service as ChromeService
 import re
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+import time
 
+'''
 # Set the path to your ChromeDriver executable
 chrome_driver_path = r"C:\Users\luisk\OneDrive\Ambiente de Trabalho\Programas\chromedriver-win64\chromedriver.exe"
 
@@ -17,7 +22,10 @@ chrome_service = ChromeService(executable_path=chrome_driver_path)
 # Create a Chrome webdriver instance using the service
 driver = webdriver.Chrome(service=chrome_service, options=chrome_options)
 
-metacritic_dataset = pd.read_csv('../datasets/wikipedia_games.csv')
+metacritic_dataset = pd.read_csv('../datasets/all_games.csv')
+
+empty_dataset = pd.DataFrame(columns=metacritic_dataset.columns)
+
 
 metacritic_dataset['MetacriticReviews'] = None
 existantURL = {
@@ -43,14 +51,20 @@ existantURL = {
     "The Chronicles of Narnia: The Lion, The Witch and The Wardrobe": "https://www.metacritic.com/game/the-chronicles-of-narnia-the-lion-the-witch-and/",
     "Area 51": "https://www.metacritic.com/game/area-51-2005/",
     "Constantine": "https://www.metacritic.com/game/constantine-2005/",
+    "Perfect Dark": "https://www.metacritic.com/game/perfect-dark-2000/",
     
 }
 
+
+
+start = time.time()
 for index, row in metacritic_dataset.iterrows():
-    name = row['Title']
+    name = row['name']
     metacritic_url = ""
     if name in existantURL.keys():
         platform = row['platform'].lower().replace(" ", "-").replace(":", "").replace("'", "").replace(".", "").replace("/", "")
+        if (platform[0]=='-'):
+            platform = platform[1:]
         if (platform=="switch"):
             platform = "nintendo-switch"
         metacritic_url = existantURL[name] + f'critic-reviews/?platform={platform}'
@@ -59,6 +73,8 @@ for index, row in metacritic_dataset.iterrows():
         name = re.sub(r'\s+', ' ', name)
         name = name.replace(' ', '-')
         platform = row['platform'].lower().replace(" ", "-").replace(":", "").replace("'", "").replace(".", "").replace("/", "")
+        if (platform[0]=='-'):
+            platform = platform[1:]
         if (platform=="switch"):
             platform = "nintendo-switch"
         metacritic_url = f'https://www.metacritic.com/game/{name}/critic-reviews/?platform={platform}'
@@ -103,10 +119,29 @@ for index, row in metacritic_dataset.iterrows():
                 review_pair = (username_text, review_text)
                 reviews_list.append(review_pair)
                 count = count + 1
+                
     print("Success\n")
             
-    # Store reviews as list of tuples in the MetacriticReviews column
-    metacritic_dataset.at[index, 'MetacriticReviews'] = reviews_list
+    if not reviews_list:
+        # If empty, store the result in empty_dataset
+        empty_dataset.at[index, 'name'] = name
+        empty_dataset.at[index, 'MetacriticReviews'] = None  # or any placeholder value
+
+    else:
+        # Store reviews as a list of tuples in the MetacriticReviews column
+        metacritic_dataset.at[index, 'MetacriticReviews'] = reviews_list
+
+# Save the datasets to CSV files
+if not empty_dataset.empty:
+    empty_dataset.to_csv("empty_rev.csv", index=False)
     
 metacritic_dataset.to_csv("../datasets/metacritic_games.csv")    
 driver.quit()
+'''
+
+
+no_empty = pd.read_csv('../datasets/metacritic_games.csv')
+no_empty.dropna(inplace=True)
+
+no_empty.to_csv("../datasets/no_empty.csv")
+
