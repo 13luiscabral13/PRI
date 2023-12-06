@@ -31,7 +31,7 @@ const ResultsPage = () => {
     fetch(`http://localhost:3001/get_games?url=${encodedLink}`)
     .then(response => response.text())
     .then(result => {
-      console.log(result); // Output: "Result: 5"
+      console.log("My Result is: ", result); // Output: "Result: 5"
     })
     .catch(error => console.error('Error:', error));
   }

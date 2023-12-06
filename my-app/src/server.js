@@ -1,31 +1,48 @@
-// server.js
 const express = require('express');
 const cors = require('cors');
-const { exec } = require('child_process');
+const axios = require('axios')
 
 const app = express();
 const port = 3001;
 
 app.use(cors());
 
-app.get('/get_games', (req, res) => {
-  const url = req.query.url;
-  //console.log("URL: ", url);
+app.get('/get_games', async (req, res) => {
+  try {
+    const url = req.query.url;
+    console.log("URL: ", url);
 
-  const pythonScript = 'getGames.py';
-  const command = `python ${pythonScript} "${url}"`;
-  console.log("Command = ", command);
+    const response = await axios.get(url);
+    const data = response.data;
+    const reviews = data.response.docs;
+    let gameids = [];
+    let games = [];
 
-  exec(command, (error, stdout, stderr) => {
-    if (error) {
-      console.error(`Error executing Python script: ${error}`);
-      res.status(500).send('Internal Server Error');
-      return;
+    for (let index = 0; index < reviews.length; index++) {
+      const doc = reviews[index];
+
+      if (gameids.length === 20) break;
+
+      const gameId = doc.id.split('/')[0];
+
+      if (!gameids.includes(gameId)) {
+        gameids.push(gameId);
+        const queryUrl = `http://localhost:8983/solr/games/select?fl=*%2C%5Bchild%5D&indent=true&q.op=OR&q=id%3A(${gameId})&useParams=&wt=json`;
+
+        const gameResponse = await axios.get(queryUrl);
+        const gameData = gameResponse.data;
+        const gameResult = gameData.response.docs[0];
+
+        games.push(gameResult);
+      }
+      console.log("GameIds: ", gameids);
     }
 
-    const result = stdout.trim();
-    res.send(`Result: ${result}`);
-  });
+    res.send(games);
+  } catch (error) {
+    console.error("Error:", error);
+    res.status(500).send({ error: 'Internal Server Error' });
+  }
 });
 
 app.listen(port, () => {

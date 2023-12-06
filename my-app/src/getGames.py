@@ -6,22 +6,23 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 
 def get(url):
-    return requests.get(url).json()['response']['docs']
+    reviews = requests.get(url).json()['response']['docs']
 
-if __name__ == "__main__":
-    # Check if there is at least one command-line argument
-    if len(sys.argv) < 2:
-        print("Usage: python getGames.py <solr_url>")
-        sys.exit(1)
+    #print("Reviews: ", reviews)
 
-    # Get the Solr URL from the command-line argument
-    solr_url = sys.argv[1]
+    gameids = []
+    games = []
 
-    # Call the get function with the provided Solr URL
-    result = get(solr_url)
+    for index, doc in enumerate(reviews):
+        if len(gameids) == 0:
+            break
 
-    # Print the result or handle it as needed
-    if result is not None:
-        print("Result:", result)
-    else:
-        print("Failed to retrieve data.")
+        if doc['id'].split('/')[0] not in gameids:
+            #print("\nGetting game with id: ", doc['id'].split('/')[0])
+            gameids.append(doc['id'].split('/')[0])
+            query_url = "http://localhost:8983/solr/games/select?fl=*%2C%5Bchild%5D&indent=true&q.op=OR&q=id%3A(" + doc['id'].split('/')[0] + ')&useParams=&wt=json'
+            game_result = requests.get(query_url).json()['response']['docs']
+            #print('\n' + game_result)
+            games.append(game_result[0])
+    return games
+
