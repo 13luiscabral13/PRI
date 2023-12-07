@@ -18,5 +18,6 @@ sleep 20
 curl -X POST -H 'Content-type:application/json' --data-binary "@./search-engine/schema2.json" http://localhost:8983/solr/games/schema
 
 # Populate
-curl -X POST -H 'Content-type:application/json' --data-binary "@./search-engine/games_collection.json" http://localhost:8983/solr/games/update?commit=true
+curl -X POST -H 'Content-type:application/json' --data-binary "@./search-engine/games_collection_part1.json" http://localhost:8983/solr/games/update?commit=true
 
+curl -X POST -H 'Content-type:application/json' --data-binary "@./search-engine/games_collection_part2.json" http://localhost:8983/solr/games/update?commit=true
