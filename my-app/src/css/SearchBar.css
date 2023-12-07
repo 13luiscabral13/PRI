@@ -1,7 +1,21 @@
 /* SearchBar.css */
 
+
+
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+}
+
 .search-input {
-    width: 600px;
-    background-color: #a6c9e2;
+    width: 50%;
+    background-color: #BEE0FF;
+    font-size: 20px;
+    padding: 10px;
+    font-family: 'Inter', sans-serif;    
   }
   
+  .search-button {
+    padding: 5px;
+  }
