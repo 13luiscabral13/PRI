@@ -3,11 +3,14 @@ import { useState, useEffect } from 'react';
 import { useGame } from './GameContext';
 import Tabs from './Tabs';
 import Reviews from './Reviews';
+import TabsWikimeta from './TabsWikiMeta';
+import '../css/GamePage.css';
 
 const GamePage = () => {
   const { gameData } = useGame();
   const [groupedReviews, setGroupedReviews] = useState({});
   const [selectedPlatform, setSelectedPlatform] = useState(null);
+  const [selectedInfo, setSelectedInfo] = useState(null);
 
   useEffect(() => {
     if (gameData) {
@@ -25,6 +28,7 @@ const GamePage = () => {
 
       setGroupedReviews(reviewsByPlatform);
       setSelectedPlatform(Object.keys(reviewsByPlatform)[0]); // Define a primeira plataforma como selecionada inicialmente
+      setSelectedInfo('wikipedia');
     }
   }, [gameData]);
 
@@ -36,9 +40,20 @@ const GamePage = () => {
 
   return (
     <div>
-      <h2>Game Details</h2>
-      <p>Name: {gameData.name}</p>
-      <p>Summary: {gameData.summary}</p>
+      <h2>{gameData.name}</h2>
+
+      <TabsWikimeta selectedInfo={selectedInfo} onSelect={setSelectedInfo} />
+
+      <div className='info'>
+        {selectedInfo==='wikipedia' && (
+          <p>{gameData.wikipedia}</p>
+        )}
+
+        {selectedInfo==='metacritic' && (
+          <p>{gameData.summary}</p>
+        )}
+      </div>
+      
       <p>Genre: {gameData.genre}</p>
 
       {/* Display other game details */}
