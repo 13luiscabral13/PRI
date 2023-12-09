@@ -15,24 +15,7 @@ const ResultsPage = () => {
   useEffect(() => {
     const processQuery = async () => {
       try {
-        const editedSearchText = searchText.replaceAll(" ", '%20');
-
-        const domain = "http://localhost:8983/solr/games/select?";
-        const op = "%20OR%20";
-        const bq = "bq=%7B!child%20of%3D%22*%3A*%20-_nest_path_%3A*%22%7D";
-        const bqName = "name%3A(" + editedSearchText + ")%5E2";
-        const bqSummary = "summary%3A(" + editedSearchText + ")";
-        const bqWikipedia = "wikipedia%3A(" + editedSearchText + ")%5E2";
-        const bqGenre = "genre%3A(" + editedSearchText + ")%5E3";
-        const others = "&defType=edismax&fl=*%2C%5Bchild%5D&fq=%7B!child%20of%3D%22*%3A*%20-_nest_path_%3A*%22%7Dname%3A*&indent=true&q.op=OR&";
-        const q = "q=(" + editedSearchText + ")&";
-        const qf = "qf=platform%5E8%20review%5E2";
-        const extra = "&rows=1000&useParams=&wt=json";
-
-        const link = domain+bq+bqName+op+bqSummary+op+bqWikipedia+op+bqGenre+others+q+qf+extra;
-        const encodedLink = encodeURIComponent(link);
-
-        const response = await fetch(`http://localhost:3001/get_games?url=${encodedLink}`);
+        const response = await fetch(`http://localhost:3001/get_games?query=${searchText}`);
         console.log("Received response");
         const data = await response.json();
         console.log("Converting to json");
