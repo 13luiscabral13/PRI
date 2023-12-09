@@ -9,6 +9,11 @@ const GameCard = ({ id, game }) => {
     setGame(game);
   };
 
+  const firstRelease = game.reviews.reduce((earliestDate, review) => {
+                              const reviewDate = new Date(review.release_date);
+                              return !earliestDate || reviewDate < earliestDate ? reviewDate : earliestDate;
+                            }, null);
+
   return (
     <div style={styles.card}>
       <Link to={`/game/${game.name}`} onClick={handleClick}>
@@ -16,6 +21,7 @@ const GameCard = ({ id, game }) => {
       </Link>
       <p>{game.summary}</p>
       <p>Genre: {game.genre}</p>
+      <p>Release Date: {firstRelease.toISOString().split('T')[0]}</p>
     </div>
   );
 };

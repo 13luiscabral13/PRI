@@ -10,22 +10,15 @@ const ResultsPage = () => {
 
   const { searchResults, setResults } = useGame();
 
-  console.log("Search text: ", searchText);
-
   useEffect(() => {
     const processQuery = async () => {
       try {
         const response = await fetch(`http://localhost:3001/get_games?query=${searchText}`);
-        console.log("Received response");
         const data = await response.json();
-        console.log("Converting to json");
 
         setResults(data);
-
-        console.log(data);
       } catch (error) {
         console.error("Error fetching data:", error);
-        // Handle the error if needed
       }
     };
 
@@ -34,8 +27,7 @@ const ResultsPage = () => {
 
   return (
     <div>
-      <h2>Search Results</h2>
-      <p>Showing results for: {searchText}</p>
+      <h2>Showing results for: {searchText}</h2>
         <div>
           {searchResults.map((result) => (
             <GameCard

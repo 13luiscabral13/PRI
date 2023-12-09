@@ -28,47 +28,33 @@ app.get('/get_games', async (req, res) => {
       'q.op': "OR",
       q: `(${search_text})`,
       qf: "platform^8 review^2",
-      rows: 1000,   //TODO: confirm
+      rows: 1000,
       useParams: "",
       wt: "json"
     }
 
     const hardSearchParams = new URLSearchParams(hardSearchData);
 
-    console.log("Before Axios request");
     const response = await axios.post(url, hardSearchParams.toString(), {
       headers: headers
     });
-    console.log("After Axios request\n");
-
 
     const data = response.data;
     const reviews = data.response.docs;
 
     let gameids = [];
-    let games = [];
     let query = "";
 
     for (let index = 0; index < reviews.length; index++) {
       const doc = reviews[index];
 
-      if (gameids.length === 20) break;
+      if (gameids.length === 30) break;
 
       const gameId = doc.id.split('/')[0];
 
       if (!gameids.includes(gameId)) {
         gameids.push(gameId);
-
-
-        //const queryUrl = `http://localhost:8983/solr/games/select?fl=*%2C%5Bchild%5D&indent=true&q.op=OR&q=id%3A(${gameId})&useParams=&wt=json`;
-
         query += gameId + " ";
-
-        //const gameResponse = await axios.get(queryUrl);
-        //const gameData = gameResponse.data;
-        //const gameResult = gameData.response.docs[0];
-
-        //games.push(gameResult);
       }
     }
 
@@ -84,11 +70,9 @@ app.get('/get_games', async (req, res) => {
 
     const searchParams = new URLSearchParams(searchData);
 
-    console.log("Before games request");
     const responseGames = await axios.post(url, searchParams.toString(), {
       headers: headers
     });
-    console.log("After games request\n");
 
     res.send(responseGames.data.response.docs);
   } catch (error) {

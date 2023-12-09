@@ -11,8 +11,29 @@ const GamePage = () => {
   const [groupedReviews, setGroupedReviews] = useState({});
   const [selectedPlatform, setSelectedPlatform] = useState(null);
   const [selectedInfo, setSelectedInfo] = useState(null);
+  const [selectedReleaseDate, setSelectedReleaseDate] = useState(null);
 
-  useEffect(() => {
+  const getReleaseDateByPlatform = (platform) => {
+    const reviewForPlatform = gameData.reviews.find(review => review.platform === platform);
+  
+    // Verifica se encontrou uma entrada para a plataforma
+    if (reviewForPlatform) {
+      return reviewForPlatform.release_date;
+    } else {
+      // Retorna null ou uma string padrão se a plataforma não for encontrada
+      return null;
+    }
+  };
+
+  const handlePlatformSelect = (platform) => {
+    setSelectedPlatform(platform);
+    
+    const releaseDate = getReleaseDateByPlatform(platform);
+
+    setSelectedReleaseDate(releaseDate.split('T')[0]);
+  };
+
+  useEffect( () => {
     if (gameData) {
       const reviewsByPlatform = gameData.reviews.reduce((acc, review) => {
         const platform = review.platform;
@@ -27,8 +48,8 @@ const GamePage = () => {
       }, {});
 
       setGroupedReviews(reviewsByPlatform);
-      setSelectedPlatform(Object.keys(reviewsByPlatform)[0]); // Define a primeira plataforma como selecionada inicialmente
       setSelectedInfo('wikipedia');
+      handlePlatformSelect(Object.keys(reviewsByPlatform)[0]); // Define a primeira plataforma como selecionada inicialmente
     }
   }, [gameData]);
 
@@ -39,8 +60,10 @@ const GamePage = () => {
   const platforms = Object.keys(groupedReviews);
 
   return (
-    <div>
+    <div className='game-content'>
       <h2>{gameData.name}</h2>
+
+      <p>Release date: {selectedReleaseDate}</p>
 
       <TabsWikimeta selectedInfo={selectedInfo} onSelect={setSelectedInfo} />
 
@@ -57,9 +80,9 @@ const GamePage = () => {
       <p>Genre: {gameData.genre}</p>
 
       {/* Display other game details */}
-      <Tabs platforms={platforms} selectedPlatform={selectedPlatform} onSelect={setSelectedPlatform} />
+      <Tabs platforms={platforms} selectedPlatform={selectedPlatform} onSelect={handlePlatformSelect} />
 
-      <p>What people think of {gameData.name} on the {selectedPlatform}</p>
+      <p>What people think of <strong>{gameData.name}</strong> on the <strong>{selectedPlatform}</strong></p>
 
       {selectedPlatform && (
         <Reviews reviews={groupedReviews[selectedPlatform]} />
