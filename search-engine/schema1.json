@@ -41,7 +41,7 @@
     ],
     "add-field": [
         {
-            "name": "title",
+            "name": "name",
             "type": "textfield",
             "indexed": true
         },

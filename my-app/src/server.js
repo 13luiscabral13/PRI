@@ -35,9 +35,9 @@ app.get('/get_games', async (req, res) => {
 
         games.push(gameResult);
       }
-      console.log("GameIds: ", gameids);
     }
 
+    console.log("GameIds: ", gameids);
     res.send(games);
   } catch (error) {
     console.error("Error:", error);

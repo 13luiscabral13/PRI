@@ -1,14 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useGame } from './GameContext';
 
-const GameCard = ({ id, title, summary, releaseDate }) => {
+const GameCard = ({ id, game }) => {
+  const { setGame } = useGame();
+
+  const handleClick = () => {
+    setGame(game);
+  };
+
   return (
     <div style={styles.card}>
-      <Link to={`/game/${id}`}>
-        <h3>{title}</h3>
+      <Link to={`/game/${game.name}`} onClick={handleClick}>
+        <h3>{game.name}</h3>
       </Link>
-      <p>{summary}</p>
-      <p>Release Date: {releaseDate}</p>
+      <p>{game.summary}</p>
+      <p>Genre: {game.genre}</p>
     </div>
   );
 };
