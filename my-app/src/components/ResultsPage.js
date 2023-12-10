@@ -42,6 +42,22 @@ const ResultsPage = () => {
     setNonRelevantResults((prevNonRelevantResults) => [...prevNonRelevantResults, document]);
   }
 
+  const handleMoreLikeThisSearchSubmit = async () => {
+    try {
+      const response = await fetch(`http://localhost:3001/get_more_games?query=${searchText}`, {
+        headers: {
+          relevant: relevantResults,
+          nonRelevant: nonRelevantResults
+        }
+      });
+      const data = await response.json();
+
+      setResults(data);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  }
+
   return (
     <div className='results-content'>
       <span className='results-header'>
@@ -50,7 +66,9 @@ const ResultsPage = () => {
           <p>Returned {searchResults.length} results.</p>
           <p>Here they are:</p>
         </div>
-        <button type="submit" className="search-button">Search More Like This</button>
+        <button type="submit" className="search-button" onClick={handleMoreLikeThisSearchSubmit}>
+          Search More Like This
+        </button>
       </span>
       <div className='game-results'>
         {searchResults.map((result) => (

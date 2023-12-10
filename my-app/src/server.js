@@ -93,7 +93,11 @@ app.get('/get_games', async (req, res) => {
 });
 
 app.get('/get_more_games', async (req, res) => {
+  const search_text = req.query.query;
+  const relevantDocs = req.headers.relevant;
+  const nonRelevantDocs = req.headers.nonrelevant;
 
+  // TODO
 });
 
 function getQueryVector(query) {
