@@ -5,6 +5,13 @@ const axios = require('axios')
 const app = express();
 const port = 3001;
 
+const stopWords = [
+  '', 'a','an', 'and', 'are', 'as', 'at', 'be', 'but', 'by', 'can', 'can\'t', 'could', 'couldn\'t', 'did', 'do', 'does', 'down', 'for', 'from', 'has', 
+  'have', 'he', 'her', 'him', 'i', 'in', 'is', 'it', 'its', 'mine', 'my', 'not', 'of', 'on', 'our', 'ours', 'she', 'should', 'shouldn\'t', 'so',
+  'that', 'the', 'theirs', 'them', 'they', 'this', 'these', 'those', 'to', 'too', 'up', 'us', 'was', 'we', 'were', 'will', 'with', 'what', 'where',
+  'who', 'you', 'your', 'yours'
+];
+
 app.use(cors());
 
 app.get('/get_games', async (req, res) => {
@@ -90,6 +97,9 @@ function getQueryVector(query) {
   const queryTF = new Map();
 
   for (const term of queryTerms) {
+    if (stopWords.includes(term))
+      continue;
+
     if (!queryTF.has(term)) {
       queryTF.set(term, 1);
     } else {
@@ -106,6 +116,9 @@ function getDocumentVector(document) {
   const documentTF = new Map();
 
   for (const term of summaryTerms) {
+    if (stopWords.includes(term))
+      continue;
+
     if (!documentTF.has(term)) {
       documentTF.set(term, 1);
     } else {
@@ -114,6 +127,9 @@ function getDocumentVector(document) {
   }
 
   for (const term of wikipediaTerms) {
+    if (stopWords.includes(term))
+      continue;
+
     if (!documentTF.has(term)) {
       documentTF.set(term, 1);
     } else {
@@ -124,6 +140,9 @@ function getDocumentVector(document) {
   for (const review of document.reviews) {
     const reviewTerms = review.review.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '').split(" ");
     for (const term of reviewTerms) {
+      if (stopWords.includes(term))
+        continue;
+
       if (!documentTF.has(term)) {
         documentTF.set(term, 1);
       } else {
