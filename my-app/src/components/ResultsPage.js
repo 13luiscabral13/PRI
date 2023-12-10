@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useGame } from './GameContext';
 import GameCard from './GameCard';
+import '../css/ResultsPage.css';
 
 const ResultsPage = () => {
   const location = useLocation();
@@ -26,9 +27,11 @@ const ResultsPage = () => {
   }, [searchText, setResults]); // O array vazio assegura que o useEffect é chamado apenas uma vez, equivalente ao componentDidMount
 
   return (
-    <div>
-      <h2>Showing results for: {searchText}</h2>
-        <div>
+    <div className='results-content'>
+      <p>You search for: <strong>{searchText}</strong></p>
+      <p>Returned {searchResults.length} results.</p>
+        <div className='game-results'>
+          <p>Here they are:</p>
           {searchResults.map((result) => (
             <GameCard
               key={result.id}

@@ -1,39 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useGame } from './GameContext';
+import '../css/GameCard.css';
 
 const GameCard = ({ id, game }) => {
   const { setGame } = useGame();
+  const [showMore, setShowMore] = useState(false);
 
   const handleClick = () => {
     setGame(game);
   };
 
+  const toggleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
   const firstRelease = game.reviews.reduce((earliestDate, review) => {
-                              const reviewDate = new Date(review.release_date);
-                              return !earliestDate || reviewDate < earliestDate ? reviewDate : earliestDate;
-                            }, null);
+    const reviewDate = new Date(review.release_date);
+    return !earliestDate || reviewDate < earliestDate ? reviewDate : earliestDate;
+  }, null);
+
+  const formattedReleaseDate = new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  }).format(firstRelease);
 
   return (
-    <div style={styles.card}>
-      <Link to={`/game/${game.name}`} onClick={handleClick}>
+    <div className='game-card'>
+      <Link to={`/game/${game.name}`} onClick={handleClick} className='game-name'>
         <h3>{game.name}</h3>
       </Link>
-      <p>{game.summary}</p>
+      <div className={`summary ${showMore ? 'expanded' : ''}`}>
+        {game.summary}
+      </div>
+      {game.summary.length > 700 && !showMore && (
+        <span className='show-more-button' onClick={toggleShowMore}>
+          See More
+        </span>
+      )}
+      {showMore && (
+        <span className='show-more-button' onClick={toggleShowMore}>
+          See Less
+        </span>
+      )}
       <p>Genre: {game.genre}</p>
-      <p>Release Date: {firstRelease.toISOString().split('T')[0]}</p>
+      <p><strong>{formattedReleaseDate}</strong> </p>
     </div>
   );
-};
-
-const styles = {
-  card: {
-    border: '1px solid #ddd',
-    padding: '10px',
-    marginBottom: '10px',
-    borderRadius: '8px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  },
 };
 
 export default GameCard;
