@@ -84,26 +84,16 @@
         {
             "name": "name",
             "type": "largeTextfield",
-            "indexed": true,
-            "termVectors": true,
-            "termPositions": true,
-            "termOffsets": true
+            "indexed": true
         },
         {
             "name": "summary",
-            "type": "largeTextfield",
-            "indexed": true,
-            "termVectors": true,
-            "termPositions": true,
-            "termOffsets": true
+            "type": "largeTextfield"
         },
         {
             "name": "wikipedia",
             "type": "largeTextfield",
-            "indexed": true,
-            "termVectors": true,
-            "termPositions": true,
-            "termOffsets": true
+            "indexed": true
         },
         {
             "name": "genre",
@@ -144,10 +134,7 @@
         {
             "name": "review",
             "type": "largeTextfield",
-            "indexed": true,
-            "termVectors": true,
-            "termPositions": true,
-            "termOffsets": true
+            "indexed": true
         },
         {
             "name": "reviews",

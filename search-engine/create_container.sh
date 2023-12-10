@@ -13,8 +13,6 @@ sleep 20
  docker cp "$PWD"/stopwords.txt gamegalaxy:/var/solr/data/games/conf
 # Import synonyms file
 docker cp "$PWD"/search-engine/synonyms.txt gamegalaxy:/var/solr/data/games/conf
-# Import config
-docker cp "$PWD"/search-engine/solrconfig.xml gamegalaxy:/var/solr/data/games/conf
 
 # Insert schema
 curl -X POST -H 'Content-type:application/json' --data-binary "@./improved_schema.json" http://localhost:8983/solr/games/schema

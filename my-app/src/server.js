@@ -81,6 +81,60 @@ app.get('/get_games', async (req, res) => {
   }
 });
 
+app.get('/get_more_games', async (req, res) => {
+
+});
+
+function getQueryVector(query) {
+  const queryTerms = query.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '').split(" ");
+  const queryTF = new Map();
+
+  for (const term of queryTerms) {
+    if (!queryTF.has(term)) {
+      queryTF.set(term, 1);
+    } else {
+      queryTF.set(term, queryTF.get(term) + 1);
+    }
+  }
+
+  return queryTF;
+}
+
+function getDocumentVector(document) {
+  const summaryTerms = document.summary.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '').split(" ");
+  const wikipediaTerms = document.summary.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '').split(" ");
+  const documentTF = new Map();
+
+  for (const term of summaryTerms) {
+    if (!documentTF.has(term)) {
+      documentTF.set(term, 1);
+    } else {
+      documentTF.set(term, documentTF.get(term) + 1);
+    }
+  }
+
+  for (const term of wikipediaTerms) {
+    if (!documentTF.has(term)) {
+      documentTF.set(term, 1);
+    } else {
+      documentTF.set(term, documentTF.get(term) + 1);
+    }
+  }
+
+  for (const review of document.reviews) {
+    const reviewTerms = review.review.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '').split(" ");
+    for (const term of reviewTerms) {
+      if (!documentTF.has(term)) {
+        documentTF.set(term, 1);
+      } else {
+        documentTF.set(term, documentTF.get(term) + 1);
+      }
+    }
+  }
+
+  return documentTF;
+}
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
