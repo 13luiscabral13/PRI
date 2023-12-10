@@ -24,7 +24,7 @@ const ResultsPage = () => {
     };
 
     processQuery();
-  }, [searchText, setResults]); // O array vazio assegura que o useEffect é chamado apenas uma vez, equivalente ao componentDidMount
+  }, [searchText]); // O array vazio assegura que o useEffect é chamado apenas uma vez, equivalente ao componentDidMount
 
   return (
     <div className='results-content'>
