@@ -10,14 +10,14 @@ docker run -p 8983:8983 --name gamegalaxy -d solr:9.3 solr-precreate games
 sleep 20
 
 # Import stop words file
- docker cp "$PWD"/search-engine/stopwords.txt gamegalaxy:/var/solr/data/games/conf
+ docker cp "$PWD"/stopwords.txt gamegalaxy:/var/solr/data/games/conf
 # Import synonyms file
 docker cp "$PWD"/search-engine/synonyms.txt gamegalaxy:/var/solr/data/games/conf
 # Import config
 docker cp "$PWD"/search-engine/solrconfig.xml gamegalaxy:/var/solr/data/games/conf
 
 # Insert schema
-curl -X POST -H 'Content-type:application/json' --data-binary "@./search-engine/improved_schema.json" http://localhost:8983/solr/games/schema
+curl -X POST -H 'Content-type:application/json' --data-binary "@./improved_schema.json" http://localhost:8983/solr/games/schema
 
 # Populate
 curl -X POST -H 'Content-type:application/json' --data-binary "@./search-engine/games_collection_part1.json" http://localhost:8983/solr/games/update?commit=true

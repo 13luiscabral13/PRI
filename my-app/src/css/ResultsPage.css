@@ -1,0 +1,9 @@
+.game-results {
+    gap: 25px;
+}
+
+.results-content {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: left;
+}

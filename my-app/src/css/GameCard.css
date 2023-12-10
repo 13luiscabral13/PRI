@@ -1,0 +1,31 @@
+.game-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    background-color: #f0f0f0;
+}
+
+.game-name{
+    text-decoration: none;
+    color: black;
+}
+  
+.summary {
+    max-height: 90px; /* Altura máxima antes de ser truncado */
+    overflow: hidden;
+}
+  
+.show-more-button {
+    cursor: pointer;
+    color: blue;
+    margin-top: 5px;
+}
+
+.summary.expanded {
+    max-height: none;
+}
+  
