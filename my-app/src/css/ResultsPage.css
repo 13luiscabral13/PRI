@@ -1,3 +1,13 @@
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.results-header button {
+    margin-bottom: 1.5em;
+}
+
 .game-results {
     gap: 25px;
 }

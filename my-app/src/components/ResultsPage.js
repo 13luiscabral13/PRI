@@ -10,6 +10,8 @@ const ResultsPage = () => {
   const searchText = searchParams.get('search');
 
   const { searchResults, setResults } = useGame();
+  const [ relevantResults, setRelevantResults ] = useState([]);
+  const [ nonRelevantResults, setNonRelevantResults ] = useState([]);
 
   useEffect(() => {
     const processQuery = async () => {
@@ -24,21 +26,42 @@ const ResultsPage = () => {
     };
 
     processQuery();
-  }, [searchText]); // O array vazio assegura que o useEffect é chamado apenas uma vez, equivalente ao componentDidMount
+  }, [searchText]);
+
+  useEffect(() => {
+    setNonRelevantResults(searchResults);
+  }, [searchResults]);
+
+  const markAsRelevant = (document) => {
+    setNonRelevantResults((prevNonRelevantResults) => prevNonRelevantResults.filter(doc => doc !== document));
+    setRelevantResults((prevRelevantResults) => [...prevRelevantResults, document]);
+  }
+  
+  const unmarkAsRelevant = (document) => {
+    setRelevantResults((prevRelevantResults) => prevRelevantResults.filter(doc => doc !== document));
+    setNonRelevantResults((prevNonRelevantResults) => [...prevNonRelevantResults, document]);
+  }
 
   return (
     <div className='results-content'>
-      <p>You search for: <strong>{searchText}</strong></p>
-      <p>Returned {searchResults.length} results.</p>
-        <div className='game-results'>
+      <span className='results-header'>
+        <div>
+          <p>You search for: <strong>{searchText}</strong></p>
+          <p>Returned {searchResults.length} results.</p>
           <p>Here they are:</p>
-          {searchResults.map((result) => (
-            <GameCard
-              key={result.id}
-              game = {result}
-            />
-          ))}
         </div>
+        <button type="submit" className="search-button">Search More Like This</button>
+      </span>
+      <div className='game-results'>
+        {searchResults.map((result) => (
+          <GameCard
+            key={result.id}
+            game={result}
+            onMarkAsRelevant={markAsRelevant}
+            onUnmarkAsRelevant={unmarkAsRelevant}
+          />
+        ))}
+      </div>
     </div>
   );
 };
