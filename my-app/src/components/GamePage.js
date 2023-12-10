@@ -12,25 +12,34 @@ const GamePage = () => {
   const [selectedPlatform, setSelectedPlatform] = useState(null);
   const [selectedInfo, setSelectedInfo] = useState(null);
   const [selectedReleaseDate, setSelectedReleaseDate] = useState(null);
+  const [selectedUserScore, setSelectedUserScore] = useState(null);
+  const [selectedMetacriticScore, setSelectedMetacriticScore] = useState(null);
 
-  const getReleaseDateByPlatform = (platform) => {
+  const setAttributesByPlatform = (platform) => {
     const reviewForPlatform = gameData.reviews.find(review => review.platform === platform);
   
     // Verifica se encontrou uma entrada para a plataforma
     if (reviewForPlatform) {
-      return reviewForPlatform.release_date;
-    } else {
-      // Retorna null ou uma string padrão se a plataforma não for encontrada
-      return null;
+      const releaseDate = new Intl.DateTimeFormat('en-US', {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric',
+      }).format(new Date(reviewForPlatform.release_date));
+
+      const userScore = reviewForPlatform.user_review;
+      const metaScore = reviewForPlatform.meta_score;
+
+      setSelectedReleaseDate(releaseDate);
+      setSelectedUserScore(userScore);
+      setSelectedMetacriticScore(metaScore);
+      
     }
   };
 
   const handlePlatformSelect = (platform) => {
     setSelectedPlatform(platform);
     
-    const releaseDate = getReleaseDateByPlatform(platform);
-
-    setSelectedReleaseDate(releaseDate.split('T')[0]);
+    setAttributesByPlatform(platform);
   };
 
   useEffect( () => {
@@ -48,7 +57,7 @@ const GamePage = () => {
       }, {});
 
       setGroupedReviews(reviewsByPlatform);
-      setSelectedInfo('wikipedia');
+      setSelectedInfo('Wikipedia');
       handlePlatformSelect(Object.keys(reviewsByPlatform)[0]); // Define a primeira plataforma como selecionada inicialmente
     }
   }, [gameData]);
@@ -61,23 +70,34 @@ const GamePage = () => {
 
   return (
     <div className='game-content'>
-      <h2>{gameData.name}</h2>
+      <h2 className='game-name'>{gameData.name}</h2>
 
-      <p>Release date: {selectedReleaseDate}</p>
+      <h3 className='game-date'><i>{selectedReleaseDate}</i></h3>
 
       <TabsWikimeta selectedInfo={selectedInfo} onSelect={setSelectedInfo} />
 
       <div className='info'>
-        {selectedInfo==='wikipedia' && (
+        {selectedInfo==='Wikipedia' && (
           <p>{gameData.wikipedia}</p>
         )}
 
-        {selectedInfo==='metacritic' && (
+        {selectedInfo==='Metacritic' && (
           <p>{gameData.summary}</p>
         )}
       </div>
       
       <p>Genre: {gameData.genre}</p>
+
+      <div className='game-score'>
+        <div className='user-score'>
+          <h4>User Score </h4>
+          <span className='score-circle'>{selectedUserScore}</span>
+        </div>
+        <div className='meta-score'>
+          <h4>Critics Score </h4>
+          <span className='score-circle'>{selectedMetacriticScore}</span>
+        </div>
+      </div>    
 
       {/* Display other game details */}
       <Tabs platforms={platforms} selectedPlatform={selectedPlatform} onSelect={handlePlatformSelect} />

@@ -5,19 +5,19 @@ const TabsWikimeta = ({ selectedInfo, onSelect }) => {
   return (
     <div className="tabs-info">
         <button
-          key = 'wikipedia'
-          onClick={() => onSelect('wikipedia')}
-          className={`tab-button ${selectedInfo === 'wikipedia' ? 'active' : ''}`}
+          key = 'Wikipedia'
+          onClick={() => onSelect('Wikipedia')}
+          className={`tab-button ${selectedInfo === 'Wikipedia' ? 'active' : ''}`}
         >
-          {'wikipedia'}
+          {'Wikipedia'}
         </button>
 
         <button
-          key = 'metacritic'
-          onClick={() => onSelect('metacritic')}
-          className={`tab-button ${selectedInfo === 'metacritic' ? 'active' : ''}`}
+          key = 'Metacritic'
+          onClick={() => onSelect('Metacritic')}
+          className={`tab-button ${selectedInfo === 'Metacritic' ? 'active' : ''}`}
         >
-          {'metacritic'}
+          {'Metacritic'}
         </button>
     </div>
   );
