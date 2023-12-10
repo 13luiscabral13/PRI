@@ -12,6 +12,10 @@ const stopWords = [
   'who', 'you', 'your', 'yours'
 ];
 
+const rocchioAlpha = 1;
+const rocchioBeta = 0.75;
+const rocchioGamma = 0.15;
+
 app.use(cors());
 
 app.get('/get_games', async (req, res) => {
@@ -152,6 +156,49 @@ function getDocumentVector(document) {
   }
 
   return documentTF;
+}
+
+function sumVectors(vector1, vector2) {
+  const result = new Map();
+  for (const [term, frequency] of vector1) {
+    result.set(term, frequency);
+  }
+  for (const [term, frequency] of vector2) {
+    result.set(term, (result.get(term) || 0) + frequency);
+  }
+  return result;
+}
+
+function multiplyVectorByScalar(vector, scalar) {
+  const result = new Map();
+  for (const [term, frequency] of vector) {
+    result.set(term, frequency * scalar);
+  }
+  return result;
+}
+
+function rocchioAlgorithm(query, relevantDocs, nonRelevantDocs) {
+  let relevantsVector = new Map();
+  let nonRelevantsVector = new Map();
+
+  for (const documentVector of relevantDocs) {
+    relevantsVector = sumVectors(relevantsVector, documentVector);
+  }
+  for (const documentVector of nonRelevantDocs) {
+    nonRelevantsVector = sumVectors(nonRelevantsVector, documentVector)
+  }
+
+  const queryTerm = multiplyVectorByScalar(query, rocchioAlpha);
+  const relevantsTerm = multiplyVectorByScalar(relevantsVector, rocchioBeta / relevantDocs.length);
+  const nonRelevantsTerm = multiplyVectorByScalar(nonRelevantsVector, rocchioGamma / nonRelevantDocs.length);
+  
+  const modifiedQuery = queryTerm + relevantsTerm - nonRelevantsTerm;
+  for (const [term, frequency] of modifiedQuery) {
+    if (frequency <= 0) {
+      modifiedQuery.delete(term);
+    }
+  }
+  return modifiedQuery;
 }
 
 app.listen(port, () => {
