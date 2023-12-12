@@ -11,8 +11,6 @@ sleep 20
 
 # Import stop words file
  docker cp "$PWD"/stopwords.txt gamegalaxy:/var/solr/data/games/conf
-# Import synonyms file
- docker cp "$PWD"/synonyms.txt gamegalaxy:/var/solr/data/games/conf
 
 # Insert schema
 curl -X POST -H 'Content-type:application/json' --data-binary "@./improved_schema.json" http://localhost:8983/solr/games/schema
@@ -21,10 +19,6 @@ curl -X POST -H 'Content-type:application/json' --data-binary "@./improved_schem
 curl -X POST -H 'Content-type:application/json' --data-binary "@./games_collection_part1.json" http://localhost:8983/solr/games/update?commit=true
 
 curl -X POST -H 'Content-type:application/json' --data-binary "@./games_collection_part2.json" http://localhost:8983/solr/games/update?commit=true
-
-curl -X POST -H 'Content-type:application/json' --data-binary "@./games_collection_part3.json" http://localhost:8983/solr/games/update?commit=true
-
-curl -X POST -H 'Content-type:application/json' --data-binary "@./games_collection_part4.json" http://localhost:8983/solr/games/update?commit=true
 
 # Add more like this handler
 curl -X POST -H 'Content-type:application/json' \
