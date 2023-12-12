@@ -24,6 +24,9 @@ const ResultsPage = () => {
         } else {
           setResults(data);
         }
+
+        setRelevantResults([]);
+        setNonRelevantResults([]);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -87,6 +90,7 @@ const ResultsPage = () => {
           <GameCard
             key={result.id}
             game={result}
+            relevant={relevantResults.includes(result)}
             onMarkAsRelevant={markAsRelevant}
             onUnmarkAsRelevant={unmarkAsRelevant}
           />

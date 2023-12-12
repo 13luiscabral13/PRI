@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useGame } from './GameContext';
 import '../css/GameCard.css';
 
-const GameCard = ({ id, game, onMarkAsRelevant, onUnmarkAsRelevant }) => {
+const GameCard = ({ id, game, relevant, onMarkAsRelevant, onUnmarkAsRelevant }) => {
   const { setGame } = useGame();
   const [showMore, setShowMore] = useState(false);
 
@@ -42,7 +42,7 @@ const GameCard = ({ id, game, onMarkAsRelevant, onUnmarkAsRelevant }) => {
         </Link>
         <span className='mark-relevant'>
           <span>Relevant?</span>
-          <input className='mark-relevant-checkbox' type='checkbox' onChange={toggleMarkAsRelevant}></input>
+          <input className='mark-relevant-checkbox' type='checkbox' checked={relevant} onChange={toggleMarkAsRelevant}></input>
         </span>
       </span>
       <div className={`summary ${showMore ? 'expanded' : ''}`}>
