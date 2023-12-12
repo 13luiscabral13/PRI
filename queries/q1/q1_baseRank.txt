@@ -1,36 +1,36 @@
 \begin{tabular}{l}
 \toprule
-                                             BASE \\
+                              BASE \\
 \midrule
-                                  Road Redemption \\
-                                Team Sonic Racing \\
-                                         The Crew \\
-                Mercenary Kings: Reloaded Edition \\
-                                    Fuzion Frenzy \\
-Olympic Games Tokyo 2020: The Official Video Game \\
-                          Fat Princess Adventures \\
-                                  Just Dance 2015 \\
-                Plants vs Zombies: Garden Warfare \\
-                                      Crackdown 2 \\
-                                   Mario Party 10 \\
-                                Kirby Star Allies \\
-                          Mario Sports Superstars \\
-                                     Renegade Ops \\
-                                  Mega Coin Squad \\
-                      Super Smash Bros. for Wii U \\
-             Snipperclips - Cut it out, together! \\
-                                        Cake Bash \\
-                                        Patapon 3 \\
-                  Phantom Breaker: Battle Grounds \\
-                                        Cubixx HD \\
-                                    Toybox Turbos \\
-            Ratchet \& Clank: Full Frontal Assault \\
-                               Fruit Ninja Kinect \\
-                                TrackMania (2003) \\
-                                     Trailblazers \\
-                                      Gang Beasts \\
-                                      Clandestine \\
-   Ultra Street Fighter II: The Final Challengers \\
-                                      Go Vacation \\
+                 Team Sonic Racing \\
+                   Road Redemption \\
+           Mario Sports Superstars \\
+                 TrackMania (2003) \\
+                     Toybox Turbos \\
+                      SpeedRunners \\
+                    Joy Ride Turbo \\
+                Mantis Burn Racing \\
+       Need for Speed: Most Wanted \\
+                              DiRT \\
+                         GripShift \\
+          Need for Speed ProStreet \\
+                      MTX Mototrax \\
+             Need for Speed: Nitro \\
+                   FAST Racing NEO \\
+               Need for Speed Heat \\
+   Rally Fusion: Race of Champions \\
+          Star Wars: Racer Revenge \\
+     Ford Bold Moves Street Racing \\
+           Project Gotham Racing 4 \\
+                Shift 2: Unleashed \\
+                         NASCAR 07 \\
+          Jeremy McGrath's Offroad \\
+      Midnight Club 3: DUB Edition \\
+World of Outlaws: Sprint Cars 2002 \\
+                  Table Top Racing \\
+              Rallisport Challenge \\
+            Rallisport Challenge 2 \\
+                     Mario Kart DS \\
+         NASCAR Racing 2002 Season \\
 \bottomrule
 \end{tabular}

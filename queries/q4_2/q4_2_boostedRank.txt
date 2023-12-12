@@ -1,16 +1,36 @@
 \begin{tabular}{l}
 \toprule
-            BOOSTED \\
+                                           BOOSTED \\
 \midrule
-    NBA Playgrounds \\
-           NBA 2K16 \\
-ESPN NBA Basketball \\
-        NBA Live 19 \\
-         Sports Jam \\
-        NBA Live 15 \\
-        NBA Live 16 \\
-            NBA 2K3 \\
-             NBA 07 \\
-        NBA Live 14 \\
+          Famicom Detective Club: The Missing Heir \\
+Famicom Detective Club: The Girl Who Stands Behind \\
+                           OlliOlli: Switch Stance \\
+Dr. Kawashima's Brain Training for Nintendo Switch \\
+                    Railway Empire: Switch Edition \\
+ Crypt of the NecroDancer: Nintendo Switch Edition \\
+                                          Swim Out \\
+                                        Family Guy \\
+                 Hasbro Family Game Night: Yahtzee \\
+                  Hasbro Family Game Night: Sorry! \\
+        Farming Simulator: Nintendo Switch Edition \\
+                Hasbro Family Game Night: Scrabble \\
+            Hasbro Family Game Night: Connect Four \\
+                                        Switchball \\
+     Pinball Hall of Fame: The Gottlieb Collection \\
+                              Mighty Switch Force! \\
+          Hasbro Family Game Night: Sorry! Sliders \\
+          Mighty Switch Force! Hyper Drive Edition \\
+                                         Sheltered \\
+                       What Remains of Edith Finch \\
+                                 Luigi's Mansion 3 \\
+                                Banner of the Maid \\
+                            Mighty Switch Force! 2 \\
+                                  Romancing SaGa 3 \\
+    Werewolf: The Apocalypse - Heart of the Forest \\
+                                   Pikmin 3 Deluxe \\
+   Fire Emblem: Shadow Dragon \& the Blade of Light \\
+          Story of Seasons: Pioneers of Olive Town \\
+    Pinball Hall of Fame - The Gottlieb Collection \\
+     Pinball Hall of Fame: The Williams Collection \\
 \bottomrule
 \end{tabular}

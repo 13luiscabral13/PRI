@@ -1,13 +1,12 @@
 import webbrowser
 from googlesearch import search
 
-query_number = "q1"
+query_number = "q4_2"
 
 base_path = "../queries/" + query_number + "/" + query_number + "_baseRank.txt"
 boosted_path = "../queries/" + query_number + "/" + query_number + "_boostedRank.txt"
 relevant = "../queries/" + query_number + "/" + query_number + "_relevant.txt"
 
-file_path = boosted_path
 numberOfResults = 3
 
 def extract_game_names(file_path):
@@ -21,15 +20,9 @@ def extract_game_names(file_path):
         print(f"Error reading the file '{file_path}': {e}")
         return []
 
-def search_google(query):
-    try:
-        search_results = list(search(query, advanced=True))
-        print(f"URL: {search_results[0].url}\n")
-    except Exception as e:
-        print(f"Error searching for '{query}': {e}")
 
 
-def checkRelevance(name):
+def checkRelevance(name, file_path):
     if ("boosted" in file_path): 
         with open(relevant, 'r', encoding='UTF-8') as file:
             lines = file.readlines()
@@ -56,7 +49,8 @@ def main(file_path):
     game_names = extract_game_names(file_path)
     print(game_names)
     for game_name in game_names:
-        checkRelevance(game_name)
+        checkRelevance(game_name, file_path)
 
-        
-main(file_path)
+main(base_path)
+main(boosted_path)
+

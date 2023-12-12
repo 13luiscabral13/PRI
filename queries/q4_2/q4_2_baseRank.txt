@@ -1,16 +1,36 @@
 \begin{tabular}{l}
 \toprule
-                BASE \\
+                                          BASE \\
 \midrule
-            NBA 2K16 \\
-         NBA Live 19 \\
-         NBA Live 15 \\
-             NBA 2K3 \\
-              NBA 07 \\
-         NBA Live 16 \\
- ESPN NBA Basketball \\
-     NBA Playgrounds \\
-         NBA Live 14 \\
-inFamous: Second Son \\
+                 Max: The Curse of Brotherhood \\
+                             Super Mario Party \\
+          Super Mario 3D World + Bowser's Fury \\
+                             Super Bomberman R \\
+              Wolfenstein II: The New Colossus \\
+                                     UnderMine \\
+                                Child of Light \\
+                                    Snooker 19 \\
+                           Valkyria Chronicles \\
+                             Kirby Star Allies \\
+Ultra Street Fighter II: The Final Challengers \\
+          Snipperclips - Cut it out, together! \\
+                              Kirby Fighters 2 \\
+        Clubhouse Games: 51 Worldwide Classics \\
+                AVICII Invector Encore Edition \\
+                       Bubble Bobble 4 Friends \\
+                   Burnout Paradise Remastered \\
+                        Xenoblade Chronicles 2 \\
+                                    Splatoon 2 \\
+                      ACA NeoGeo: Metal Slug 3 \\
+                                       Celeste \\
+               Mario + Rabbids: Kingdom Battle \\
+                                Stories Untold \\
+                     El Hijo: A Wild West Tale \\
+                      Tetris Effect: Connected \\
+                 Animal Crossing: New Horizons \\
+                                  Sine Mora EX \\
+                         Sega Genesis Classics \\
+                    Doraemon: Story of Seasons \\
+                           Super Mario Odyssey \\
 \bottomrule
 \end{tabular}

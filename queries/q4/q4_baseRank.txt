@@ -1,16 +1,36 @@
 \begin{tabular}{l}
 \toprule
-BASE \\
+                                             BASE \\
 \midrule
-NBA 2K16 \\
-NBA Live 19 \\
-NBA 2K3 \\
-NBA 07 \\
-NBA Live 15 \\
-NBA Live 16 \\
-ESPN NBA Basketball \\
-NBA Playgrounds \\
-NBA Live 14 \\
-inFamous: Second Son \\
+                                Super Mario Party \\
+                                   Child of Light \\
+                                Super Bomberman R \\
+                 Wolfenstein II: The New Colossus \\
+                    Max: The Curse of Brotherhood \\
+                              Valkyria Chronicles \\
+           Clubhouse Games: 51 Worldwide Classics \\
+                                Kirby Star Allies \\
+                                My Time At Portia \\
+                          Bubble Bobble 4 Friends \\
+                    Animal Crossing: New Horizons \\
+                                 Dead by Daylight \\
+                                       Moving Out \\
+                          OlliOlli: Switch Stance \\
+                                Luigi's Mansion 3 \\
+                                        Robonauts \\
+                                    Torchlight II \\
+                                The Banner Saga 1 \\
+                  Crash Bandicoot N. Sane Trilogy \\
+             Snipperclips - Cut it out, together! \\
+                             LEGO City Undercover \\
+                                        Outlast 2 \\
+                             Farming Simulator 20 \\
+                            Yoshi's Crafted World \\
+                                    Rocket League \\
+                              Super Mario Maker 2 \\
+                   Diablo III: Eternal Collection \\
+             Phoenix Wright: Ace Attorney Trilogy \\
+Olympic Games Tokyo 2020: The Official Video Game \\
+                                        Riverbond \\
 \bottomrule
 \end{tabular}

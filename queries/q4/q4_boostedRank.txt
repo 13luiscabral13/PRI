@@ -1,16 +1,36 @@
 \begin{tabular}{l}
 \toprule
-BOOSTED \\
+                                           BOOSTED \\
 \midrule
-NBA Playgrounds \\
-NBA 2K16 \\
-NBA Live 19 \\
-NBA Live 15 \\
-NBA Live 16 \\
-ESPN NBA Basketball \\
-Sports Jam \\
-Disc Jam \\
-NBA 07 \\
-NBA 2K3 \\
+                           OlliOlli: Switch Stance \\
+                                         Sheltered \\
+                    Railway Empire: Switch Edition \\
+Dr. Kawashima's Brain Training for Nintendo Switch \\
+                       What Remains of Edith Finch \\
+                                        Family Guy \\
+                                 Super Mario Party \\
+                     Mario Kart Live: Home Circuit \\
+ Olympic Games Tokyo 2020: The Official Video Game \\
+                              LEGO The Incredibles \\
+ Crypt of the NecroDancer: Nintendo Switch Edition \\
+                                 My Time At Portia \\
+          Famicom Detective Club: The Missing Heir \\
+                                  West of Loathing \\
+                Super Monkey Ball: Banana Blitz HD \\
+        Farming Simulator: Nintendo Switch Edition \\
+            Clubhouse Games: 51 Worldwide Classics \\
+                                 Mario Tennis Aces \\
+                                        Splatoon 2 \\
+                             Cars 3: Driven to Win \\
+                                         Robonauts \\
+                                 Children of Morta \\
+                                         Riverbond \\
+                                        Moving Out \\
+                                  Pokemon Cafe Mix \\
+                            Mario Golf: Super Rush \\
+                 Hasbro Family Game Night: Yahtzee \\
+                               Mario Kart 8 Deluxe \\
+                              HYPERCHARGE: Unboxed \\
+                                  Kirby Fighters 2 \\
 \bottomrule
 \end{tabular}

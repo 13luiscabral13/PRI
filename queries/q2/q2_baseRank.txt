@@ -1,16 +1,36 @@
 \begin{tabular}{l}
 \toprule
-BASE \\
+                                       BASE \\
 \midrule
-Thief: Deadly Shadows \\
-Terminator 3: The Redemption \\
-Naughty Bear \\
-Aliens Versus Predator: Extinction \\
-TOCA Race Driver 3 \\
-Alien Breed 3: Descent \\
-Virtua Tennis 3 \\
-Project Gotham Racing 3 \\
-Tak: The Great Juju Challenge \\
-Starlink: Battle for Atlas \\
+                                     Crysis \\
+                              XIII (Remake) \\
+                   Jurassic World Evolution \\
+                                  Mafia III \\
+            Assassin's Creed III Remastered \\
+                   Blacksad: Under the Skin \\
+              Metal Gear Solid 2: Substance \\
+The Elder Scrolls V: Skyrim Special Edition \\
+                            Hour of Victory \\
+                  True Crime: New York City \\
+                 WWE SmackDown vs. Raw 2008 \\
+                             The Occupation \\
+                                NBA Live 06 \\
+      Warhammer 40,000: Inquisitor - Martyr \\
+                               No Man's Sky \\
+                  Crazy Taxi 3: High Roller \\
+                           Agents of Mayhem \\
+                        Rogue Trooper Redux \\
+                                     ReCore \\
+                                   Sneakers \\
+                 Assassin's Creed Syndicate \\
+                        Deca Sports Freedom \\
+                         Karaoke Revolution \\
+                                 Happy Wars \\
+                           State of Decay 2 \\
+                          Marvel's Avengers \\
+                   Star Wars Battlefront II \\
+                                   Stacking \\
+                                   WWE 2K18 \\
+                          Galaga Legions DX \\
 \bottomrule
 \end{tabular}
