@@ -17,9 +17,13 @@ const ResultsPage = () => {
     const processQuery = async () => {
       try {
         const response = await fetch(`http://localhost:3001/get_games?query=${searchText}`);
+        
         const data = await response.json();
-
-        setResults(data);
+        if (data.error) {
+          setResults([]);
+        } else {
+          setResults(data);
+        }
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -45,14 +49,22 @@ const ResultsPage = () => {
   const handleMoreLikeThisSearchSubmit = async () => {
     try {
       const response = await fetch(`http://localhost:3001/get_more_games?query=${searchText}`, {
+        method: "POST",
+        body: JSON.stringify({
+          relevantResults: relevantResults,
+          nonRelevantResults: nonRelevantResults,
+        }),
         headers: {
-          relevant: relevantResults,
-          nonRelevant: nonRelevantResults
+          "Content-type": "application/json; charset=UTF-8"
         }
       });
-      const data = await response.json();
 
-      setResults(data);
+      const data = await response.json();
+      if (data.error) {
+        setResults([]);
+      } else {
+        setResults(data);
+      }
     } catch (error) {
       console.error("Error fetching data:", error);
     }
