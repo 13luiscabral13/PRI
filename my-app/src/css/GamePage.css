@@ -1,0 +1,51 @@
+.game-content {
+    text-align: left;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.game-content .game-name {
+    font-size: 2em;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+.game-score {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.user-score {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-right: 150px;
+}
+
+.meta-score {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.game-content .game-date {
+    margin-top: 0px;
+}
+
+.score-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #90c0ec;
+    color: white;
+    border-radius: 50%;
+    margin-left: 5px; /* Ajuste conforme necessário */
+    font-weight: bold;
+}
+
+.info {
+    text-align: left;
+}

@@ -1,0 +1,146 @@
+{
+	"add-field-type": [
+        {
+            "name": "shortTextfield",
+            "class": "solr.TextField",
+            "indexAnalyzer": {
+                "tokenizer": {
+                    "class": "solr.StandardTokenizerFactory"
+                },
+                "filters": [
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal": true},
+                    {"class": "solr.LowerCaseFilterFactory"},
+                    {"class": "solr.StopFilterFactory", "words": "stopwords.txt", "ignoreCase": "true"}
+                ]
+            },
+            "queryAnalyzer": {
+                "tokenizer": {
+                    "class": "solr.StandardTokenizerFactory"
+                },
+                "filters": [
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal": true},
+                    {"class": "solr.LowerCaseFilterFactory"},
+                    {"class": "solr.StopFilterFactory", "words": "stopwords.txt", "ignoreCase": "true"}
+                ]
+            }
+        },
+        {
+            "name": "largeTextfield",
+            "class": "solr.TextField",
+            "indexAnalyzer": {
+                "tokenizer": {
+                    "class": "solr.StandardTokenizerFactory"
+                },
+                "filters": [
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal": true},
+                    {"class": "solr.LowerCaseFilterFactory"},
+                    {"class": "solr.StopFilterFactory", "words": "stopwords.txt", "ignoreCase": "true"},
+                    {"class": "solr.PorterStemFilterFactory"},
+                    {"class": "solr.EdgeNGramFilterFactory", "minGramSize": "3", "maxGramSize": "7"},
+                    {"class": "solr.SynonymGraphFilterFactory", "synonyms": "synonyms.txt", "ignoreCase": "true", "expand": "true"},
+                    {"class": "solr.FlattenGraphFilterFactory"}
+                ]
+            },
+            "queryAnalyzer": {
+                "tokenizer": {
+                    "class": "solr.StandardTokenizerFactory"
+                },
+                "filters": [
+                    {"class": "solr.ASCIIFoldingFilterFactory", "preserveOriginal": true},
+                    {"class": "solr.LowerCaseFilterFactory"},
+                    {"class": "solr.StopFilterFactory", "words": "stopwords.txt", "ignoreCase": "true"},
+                    {"class": "solr.PorterStemFilterFactory"},
+                    {"class": "solr.EdgeNGramFilterFactory", "minGramSize": "3", "maxGramSize": "7"},
+                    {"class": "solr.SynonymGraphFilterFactory", "synonyms": "synonyms.txt", "ignoreCase": "true", "expand": "true"},
+                    {"class": "solr.FlattenGraphFilterFactory"}
+                ]
+            }
+        },
+        {
+            "name": "release_date",
+            "class": "solr.DatePointField"
+        },
+        {
+            "name": "meta_score",
+            "class": "solr.IntPointField"
+        },
+        {
+            "name": "user_review",
+            "class": "solr.FloatPointField"
+        },
+        {
+            "name": "reviews",
+            "class": "solr.TextField"
+        },
+        {
+            "name": "gameVector",
+            "class": "solr.DenseVectorField",
+            "vectorDimension": 384,
+            "similarityFunction": "cosine",
+            "knnAlgorithm": "hnsw"
+        }
+    ],
+    "add-field": [
+        {
+            "name": "name",
+            "type": "largeTextfield",
+            "indexed": true
+        },
+        {
+            "name": "summary",
+            "type": "largeTextfield",
+            "indexed": true
+        },
+        {
+            "name": "wikipedia",
+            "type": "largeTextfield",
+            "indexed": true
+        },
+        {
+            "name": "genre",
+            "type": "shortTextfield",
+            "indexed": true
+        },
+        {
+            "name": "platform",
+            "type": "shortTextfield",
+            "indexed": true
+        },
+        {
+            "name": "release_date",
+            "type": "release_date",
+            "indexed": true
+        },
+        {
+            "name": "meta_score",
+            "type": "meta_score",
+            "indexed": true
+        },
+        {
+            "name": "user_review",
+            "type": "user_review",
+            "indexed": true
+        },
+        {
+            "name": "vector",
+            "type": "gameVector",
+            "indexed": true,
+            "stored": true
+        },
+        {
+            "name": "reviewer",
+            "type": "shortTextfield",
+            "indexed": true
+        },
+        {
+            "name": "review",
+            "type": "largeTextfield",
+            "indexed": true
+        },
+        {
+            "name": "reviews",
+            "type": "reviews",
+            "indexed": true
+        }
+    ]
+}

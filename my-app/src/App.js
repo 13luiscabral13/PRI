@@ -5,9 +5,12 @@ import ResultsPage from './components/ResultsPage';
 import GamePage from './components/GamePage';
 import InitialLogoTop from './components/InitialLogoTop';
 import InitialLogoBottom from './components/InitialLogoBottom';
+import { GameProvider } from './components/GameContext';
+
 function App() {
   return (
     <div className="App">
+      <GameProvider>
       <Router>
         <div>
           <InitialLogoTop />
@@ -19,6 +22,7 @@ function App() {
           </Routes>
         </div>
       </Router>
+      </GameProvider>
     </div>
   );
 }

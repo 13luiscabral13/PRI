@@ -1,0 +1,15 @@
+/* Add these styles to your CSS file or component styles */
+
+.review-card {
+    background-color: #f0f0f0;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+.review-card h4 {
+    margin: 0;
+}
