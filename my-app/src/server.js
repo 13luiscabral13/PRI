@@ -100,14 +100,17 @@ app.post('/get_more_games', async (req, res) => {
     const nonRelevantDocsVectors = getSetOfVectors(nonRelevantDocs);
     const modifiedQuery = rocchioAlgorithm(queryVector, relevantDocsVectors, nonRelevantDocsVectors);
 
+    let queryTerms = [];
     let weightedQueryTerms = [];
     let maxWeight = 0;
     for (const [term, frequency] of modifiedQuery) {
+      queryTerms.push(term);
       weightedQueryTerms.push(`${term}^${frequency}`);
       if (frequency > maxWeight) {
         maxWeight = frequency;
       }
     }  
+    let query = queryTerms.join(' ');
     const weightedQuery = weightedQueryTerms.join(' ');
 
     const endpoint = 'http://localhost:8983/solr';
@@ -125,7 +128,7 @@ app.post('/get_more_games', async (req, res) => {
       fq: "{!child of=\"*:* -_nest_path_:*\"}name:*",
       indent: "true",
       'q.op': "OR",
-      q: `(${searchText})`,
+      q: `(summary:${query})`,
       qf: "platform^8 review^2",
       rows: 1000,
       useParams: "",
@@ -140,7 +143,7 @@ app.post('/get_more_games', async (req, res) => {
     const reviews = data.response.docs;
 
     let gameids = [];
-    let query = "";
+    query = "";
     for (let index = 0; index < reviews.length; index++) {
       const doc = reviews[index];
       if (gameids.length === 30) 
@@ -167,6 +170,7 @@ app.post('/get_more_games', async (req, res) => {
       headers: headers
     });
 
+    console.log(responseGames.data.response.docs)
     res.send(responseGames.data.response.docs);
   } catch (error) {
     res.status(500).send({ error: 'Internal Server Error' });
@@ -193,11 +197,8 @@ function getQueryVector(query) {
 
 function getDocumentVector(document) {
   let summaryTerms = [];
-  let wikipediaTerms = [];
   if (document.summary !== undefined)
     summaryTerms = document.summary.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '').split(" ");
-  if (document.wikipedia !== undefined)
-    wikipediaTerms = document.wikipedia.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '').split(" ");
   const documentTF = new Map();
 
   for (const term of summaryTerms) {
@@ -210,32 +211,6 @@ function getDocumentVector(document) {
       documentTF.set(term, documentTF.get(term) + 1);
     }
   }
-
-  for (const term of wikipediaTerms) {
-    if (stopWords.includes(term))
-      continue;
-
-    if (!documentTF.has(term)) {
-      documentTF.set(term, 1);
-    } else {
-      documentTF.set(term, documentTF.get(term) + 1);
-    }
-  }
-
-  for (const review of document.reviews) {
-    const reviewTerms = review.review.toLowerCase().replace(/[^a-zA-Z0-9 ]/g, '').split(" ");
-    for (const term of reviewTerms) {
-      if (stopWords.includes(term))
-        continue;
-
-      if (!documentTF.has(term)) {
-        documentTF.set(term, 1);
-      } else {
-        documentTF.set(term, documentTF.get(term) + 1);
-      }
-    }
-  }
-
   return documentTF;
 }
 
