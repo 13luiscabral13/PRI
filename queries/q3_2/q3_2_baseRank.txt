@@ -1,16 +1,36 @@
 \begin{tabular}{l}
 \toprule
-                               BASE \\
+                                            BASE \\
 \midrule
-                      Dead Rising 2 \\
- Dead Island: Definitive Collection \\
-             Resident Evil Outbreak \\
- Dead Rising 4: Frank's Big Package \\
-  Plants vs Zombies: Garden Warfare \\
-                        World War Z \\
-Zombie Tycoon 2: Brainhov's Revenge \\
-                       The Last Guy \\
-                      Resident Evil \\
-                  They Are Billions \\
+              Zombie Apocalypse: Never Die Alone \\
+                         Zombie Army 4: Dead War \\
+                           All Zombies Must Die! \\
+                                   Dead Rising 2 \\
+Call of Duty: Black Ops III - Zombies Chronicles \\
+                                       Days Gone \\
+                                      Dead Block \\
+                                     Dead Nation \\
+                                           Zombi \\
+              Dead Island: Definitive Collection \\
+                           Onechanbara Z2: Chaos \\
+  The Walking Dead: Episode 2 - Starved for Help \\
+                          Resident Evil Outbreak \\
+                               Lollipop Chainsaw \\
+                                  Zombie Vikings \\
+                              Plants vs. Zombies \\
+                                     Dying Light \\
+                              Yakuza: Dead Souls \\
+              Dead Rising 4: Frank's Big Package \\
+                  Call of Duty: Infinite Warfare \\
+                                     Dead Island \\
+    Plants vs. Zombies: Battle for Neighborville \\
+                            Dead Island: Riptide \\
+                                Burn Zombie Burn \\
+               Plants vs Zombies: Garden Warfare \\
+                 Dead Nation: Apocalypse Edition \\
+            Call of Duty: WWII - The War Machine \\
+The Walking Dead: The Telltale Definitive Series \\
+             Plants vs Zombies: Garden Warfare 2 \\
+       Call of Duty: Infinite Warfare - Sabotage \\
 \bottomrule
 \end{tabular}

@@ -2,15 +2,35 @@
 \toprule
                                     BOOSTED \\
 \midrule
-                      Thief: Deadly Shadows \\
-The Elder Scrolls V: Skyrim Special Edition \\
+                               Band of Bugs \\
+                                    Bugsnax \\
+        Bug Fables: The Everlasting Sapling \\
+                     Escape from Bug Island \\
+                             Cyberpunk 2077 \\
+                             Alpha Protocol \\
+                         Spec Ops: The Line \\
+                  Kingdom Come: Deliverance \\
+                              Project Spark \\
+                                  Mafia III \\
+                  True Crime: New York City \\
+                                Prototype 2 \\
+           Steel Battalion: Line of Contact \\
+                            The Bug Butcher \\
+                             Project CARS 2 \\
+                         Project: Snowblind \\
                     Project Gotham Racing 3 \\
-                                 Happy Wars \\
-      Sword Art Online: Alicization Lycoris \\
-            Dead Rising: Chop Till You Drop \\
-                 Alone in the Dark: Inferno \\
-     Deadly Premonition: The Director's Cut \\
-          The Witcher 2: Assassins of Kings \\
-                         Darksiders Genesis \\
+         Project Sylpheed: Arc of Deception \\
+                  Pro Evolution Soccer 2014 \\
+The Elder Scrolls V: Skyrim Special Edition \\
+                     Driver: Parallel Lines \\
+                           Romancing SaGa 2 \\
+                                  FlatOut 2 \\
+                                  Far Cry 6 \\
+    The Lord of the Rings: War in the North \\
+                 Assassin's Creed Syndicate \\
+                     Assassin's Creed Unity \\
+               NASCAR The Game: Inside Line \\
+                      Thief: Deadly Shadows \\
+  Dark Messiah of Might and Magic: Elements \\
 \bottomrule
 \end{tabular}

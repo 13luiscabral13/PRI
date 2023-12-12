@@ -1,16 +1,36 @@
 \begin{tabular}{l}
 \toprule
-BOOSTED \\
+                                    BOOSTED \\
 \midrule
-Thief: Deadly Shadows \\
-Project Gotham Racing 3 \\
-Terminator 3: The Redemption \\
-Naughty Bear \\
-Alien Breed 3: Descent \\
-Aliens Versus Predator: Extinction \\
-TOCA Race Driver 3 \\
-Virtua Tennis 3 \\
-Starlink: Battle for Atlas \\
-Tak: The Great Juju Challenge \\
+                               Band of Bugs \\
+                                  Mafia III \\
+                             Cyberpunk 2077 \\
+  State of Decay: Year One Survival Edition \\
+                              XIII (Remake) \\
+                       Dead Island: Riptide \\
+                           State of Decay 2 \\
+                  Kingdom Come: Deliverance \\
+                   Jurassic World Evolution \\
+                         Fallout: New Vegas \\
+                             State of Decay \\
+                            Dead or Alive 6 \\
+The Elder Scrolls V: Skyrim Special Edition \\
+                         Watch Dogs: Legion \\
+                                     Crysis \\
+                     Assassin's Creed Unity \\
+                         Karaoke Revolution \\
+                             The Long Reach \\
+                           The Last Remnant \\
+                  True Crime: New York City \\
+             Gears of War: Ultimate Edition \\
+                          Fable Anniversary \\
+                                   MicroBot \\
+                            Hunter's Legacy \\
+                                      Agony \\
+                                   Sneakers \\
+                 Assassin's Creed Syndicate \\
+    The Lord of the Rings: War in the North \\
+                                       Aqua \\
+                                   Stacking \\
 \bottomrule
 \end{tabular}

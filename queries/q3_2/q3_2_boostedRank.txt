@@ -1,16 +1,36 @@
 \begin{tabular}{l}
 \toprule
-                            BOOSTED \\
+                                           BOOSTED \\
 \midrule
-Zombie Tycoon 2: Brainhov's Revenge \\
-  Plants vs Zombies: Garden Warfare \\
-                      Dead Rising 2 \\
- Dead Island: Definitive Collection \\
-             Resident Evil Outbreak \\
- Dead Rising 4: Frank's Big Package \\
-                        World War Z \\
-            Silent Hill 4: The Room \\
-                       The Last Guy \\
-         Zombie Panic in Wonderland \\
+                                             Zombi \\
+                                Plants vs. Zombies \\
+               Zombie Tycoon 2: Brainhov's Revenge \\
+                             All Zombies Must Die! \\
+                Zombie Apocalypse: Never Die Alone \\
+      Plants vs. Zombies: Battle for Neighborville \\
+  Call of Duty: Black Ops III - Zombies Chronicles \\
+                  SG/ZH: School Girl Zombie Hunter \\
+                 Plants vs Zombies: Garden Warfare \\
+               Plants vs Zombies: Garden Warfare 2 \\
+                                  Burn Zombie Burn \\
+         Borderlands: The Zombie Island of Dr. Ned \\
+                           Zombie Army 4: Dead War \\
+                                    Zombie Vikings \\
+         MegaTagmension Blanc + Neptune VS Zombies \\
+                                            ZombiU \\
+                               Zombie Army Trilogy \\
+                                    Zombie Revenge \\
+                        Zombie Panic in Wonderland \\
+                         Space Pirates and Zombies \\
+                     Yet Another Zombie Defense HD \\
+                               Atom Zombie Smasher \\
+                Onechanbara: Bikini Zombie Slayers \\
+        Stubbs the Zombie in Rebel Without a Pulse \\
+               Little Red Riding Hood's Zombie BBQ \\
+Teenage Zombies: Invasion of the Alien Brain Th... \\
+                                    Age of Zombies \\
+                                 Lollipop Chainsaw \\
+                                     Dead Rising 2 \\
+                                        Dead Block \\
 \bottomrule
 \end{tabular}

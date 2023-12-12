@@ -75,7 +75,7 @@
     ],
     "add-field": [
         {
-            "name": "title",
+            "name": "name",
             "type": "largeTextfield",
             "indexed": true
         },

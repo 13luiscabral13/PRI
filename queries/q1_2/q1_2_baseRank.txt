@@ -1,16 +1,36 @@
 \begin{tabular}{l}
 \toprule
-                             BASE \\
+                                       BASE \\
 \midrule
-                Team Sonic Racing \\
-                         The Crew \\
-                  Just Dance 2015 \\
-         Destruction Derby Arenas \\
-Plants vs Zombies: Garden Warfare \\
-                        Cake Bash \\
-                 Crazy Machines 3 \\
-                     Gears of War \\
-                TrackMania (2003) \\
-                      Space Siege \\
+                                    F1 2009 \\
+                          Team Sonic Racing \\
+                             Hotshot Racing \\
+                                 The Crew 2 \\
+                                   The Crew \\
+                            Road Redemption \\
+                              Fuzion Frenzy \\
+                   Destruction Derby Arenas \\
+                               Obliteracers \\
+                    Mario Sports Superstars \\
+                                  BlazeRush \\
+                               Gears of War \\
+                              Toybox Turbos \\
+                          Super Mario Party \\
+                               Trailblazers \\
+                          Wii Sports Resort \\
+                          TrackMania (2003) \\
+                         Mantis Burn Racing \\
+                                Space Siege \\
+                              Tricky Towers \\
+              Grand Theft Auto: San Andreas \\
+         Super Monkey Ball: Banana Blitz HD \\
+                     Mario Golf: Super Rush \\
+                             Joy Ride Turbo \\
+                                  Destiny 2 \\
+                               SpeedRunners \\
+Marvel Ultimate Alliance 3: The Black Order \\
+                            39 Days to Mars \\
+                             Sacred Citadel \\
+                    Project Gotham Racing 4 \\
 \bottomrule
 \end{tabular}

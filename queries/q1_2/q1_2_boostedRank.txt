@@ -1,16 +1,36 @@
 \begin{tabular}{l}
 \toprule
-                           BOOSTED \\
+                                          BOOSTED \\
 \midrule
-                 Team Sonic Racing \\
-   Crash Team Racing: Nitro-Fueled \\
-                          The Crew \\
-                 TrackMania (2003) \\
-                  Crazy Machines 3 \\
-          Destruction Derby Arenas \\
-Super Monkey Ball: Banana Blitz HD \\
-                   Just Dance 2015 \\
- Plants vs Zombies: Garden Warfare \\
-                         Cake Bash \\
+                                   Hotshot Racing \\
+                                Team Sonic Racing \\
+                                         The Crew \\
+                                       The Crew 2 \\
+                                          F1 2009 \\
+                                    Toybox Turbos \\
+                                     Trailblazers \\
+                                TrackMania (2003) \\
+                                   Joy Ride Turbo \\
+                               Mantis Burn Racing \\
+                                  Road Redemption \\
+                         Destruction Derby Arenas \\
+                                  39 Days to Mars \\
+                          Mario Sports Superstars \\
+                                 MySims SkyHeroes \\
+                                    Fuzion Frenzy \\
+                Mercenary Kings: Reloaded Edition \\
+                                     Obliteracers \\
+                    Grand Theft Auto: San Andreas \\
+                                        BlazeRush \\
+                                        Dauntless \\
+Olympic Games Tokyo 2020: The Official Video Game \\
+                                     Gears of War \\
+                                     SpeedRunners \\
+                                 Shadow Warrior 2 \\
+                                         Payday 2 \\
+                                Super Mario Party \\
+                                   City of Heroes \\
+                             When Vikings Attack! \\
+                                        Destiny 2 \\
 \bottomrule
 \end{tabular}

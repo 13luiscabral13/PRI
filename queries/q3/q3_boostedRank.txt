@@ -1,16 +1,36 @@
 \begin{tabular}{l}
 \toprule
-BOOSTED \\
+                                   BOOSTED \\
 \midrule
-Zombie Tycoon 2: Brainhov's Revenge \\
-Dead Rising 2 \\
-Silent Hill 4: The Room \\
-Dead Island: Definitive Collection \\
-Resident Evil Outbreak \\
-World War Z \\
-Dead Rising 4: Frank's Big Package \\
-Cotton Reboot! \\
-They Are Billions \\
-Zombie Panic in Wonderland \\
+       Zombie Tycoon 2: Brainhov's Revenge \\
+                          Burn Zombie Burn \\
+        Zombie Apocalypse: Never Die Alone \\
+                   Zombie Army 4: Dead War \\
+          SG/ZH: School Girl Zombie Hunter \\
+                            Zombie Vikings \\
+                          Arizona Sunshine \\
+ Borderlands: The Zombie Island of Dr. Ned \\
+                       Zombie Army Trilogy \\
+                         Lollipop Chainsaw \\
+                             Dead Rising 2 \\
+                   The House of the Dead 4 \\
+           Dead Nation: Apocalypse Edition \\
+                     Onechanbara Z2: Chaos \\
+                      Death Road to Canada \\
+                       Atom Zombie Smasher \\
+                    Resident Evil Outbreak \\
+                               World War Z \\
+                     All Zombies Must Die! \\
+                            Zombie Revenge \\
+        Dead Island: Definitive Collection \\
+                                Dead Block \\
+                   Blacklight: Retribution \\
+                                 Days Gone \\
+        Onechanbara: Bikini Zombie Slayers \\
+                               Dead Nation \\
+Stubbs the Zombie in Rebel Without a Pulse \\
+          Dead Nation: Road of Devastation \\
+                       Zombie Night Terror \\
+                        Plants vs. Zombies \\
 \bottomrule
 \end{tabular}
