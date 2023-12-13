@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { useGame } from './GameContext';
 import GameCard from './GameCard';
 import '../css/ResultsPage.css';
+import SmallSearchBar from './SmallSearchBar';
 
 const ResultsPage = () => {
   const location = useLocation();
@@ -28,17 +29,19 @@ const ResultsPage = () => {
 
   return (
     <div className='results-content'>
-      <p>You search for: <strong>{searchText}</strong></p>
-      <p>Returned {searchResults.length} results.</p>
-        <div className='game-results'>
-          <p>Here they are:</p>
-          {searchResults.map((result) => (
-            <GameCard
-              key={result.id}
-              game = {result}
-            />
-          ))}
-        </div>
+      <div className='results-header'>
+        <SmallSearchBar />
+      </div>
+      <p>Your search for "<strong>{searchText}</strong>" returned results!</p>
+      <div className='game-results'>
+        <p>Here they are:</p>
+        {searchResults.map((result) => (
+          <GameCard
+            key={result.id}
+            game={result}
+          />
+        ))}
+      </div>
     </div>
   );
 };

@@ -28,26 +28,31 @@ const GameCard = ({ id, game }) => {
 
   return (
     <div className='game-card'>
-      <Link to={`/game/${game.name}`} onClick={handleClick} className='game-name'>
+      <Link to={`/game/${game.id}`} onClick={handleClick} className='game-name'>
         <h3>{game.name}</h3>
       </Link>
       <div className={`summary ${showMore ? 'expanded' : ''}`}>
         {game.summary}
       </div>
-      {game.summary.length > 700 && !showMore && (
+
+      {game.summary.length > 900 && !showMore && (
         <span className='show-more-button' onClick={toggleShowMore}>
-          See More
+          ▼ Show More
         </span>
       )}
+
       {showMore && (
         <span className='show-more-button' onClick={toggleShowMore}>
-          See Less
+          ▲ Show Less
         </span>
       )}
-      <p>Genre: {game.genre}</p>
-      <p><strong>{formattedReleaseDate}</strong> </p>
+      <div id="more-info">
+      <p><strong><i>{formattedReleaseDate}</i></strong> </p>
+      <p>{game.genre}</p>
+      </div>
     </div>
   );
+
 };
 
 export default GameCard;

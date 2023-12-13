@@ -5,6 +5,8 @@ import Tabs from './Tabs';
 import Reviews from './Reviews';
 import TabsWikimeta from './TabsWikiMeta';
 import '../css/GamePage.css';
+import SearchBar from './SearchBar';
+import SmallSearchBar from './SmallSearchBar';
 
 const GamePage = () => {
   const { gameData } = useGame();
@@ -70,11 +72,15 @@ const GamePage = () => {
 
   return (
     <div className='game-content'>
+      <SmallSearchBar />
+      <div className="basic-info">
+      <div className='name-date-website'>
       <h2 className='game-name'>{gameData.name}</h2>
 
       <h3 className='game-date'><i>{selectedReleaseDate}</i></h3>
-
       <TabsWikimeta selectedInfo={selectedInfo} onSelect={setSelectedInfo} />
+      </div>
+      </div>
 
       <div className='info'>
         {selectedInfo==='Wikipedia' && (
@@ -86,9 +92,13 @@ const GamePage = () => {
         )}
       </div>
       
-      <p>Genre: {gameData.genre}</p>
+      <p>{gameData.genre}</p>
 
-      <div className='game-score'>
+      
+
+      {/* Display other game details */}
+      <div className='platform-info'>
+              <div className='game-score'>
         <div className='user-score'>
           <h4>User Score </h4>
           <span className='score-circle'>{selectedUserScore}</span>
@@ -97,11 +107,10 @@ const GamePage = () => {
           <h4>Critics Score </h4>
           <span className='score-circle'>{selectedMetacriticScore}</span>
         </div>
-      </div>    
-
-      {/* Display other game details */}
+      </div>
       <Tabs platforms={platforms} selectedPlatform={selectedPlatform} onSelect={handlePlatformSelect} />
 
+      </div>    
       <p>What people think of <strong>{gameData.name}</strong> on the <strong>{selectedPlatform}</strong></p>
 
       {selectedPlatform && (

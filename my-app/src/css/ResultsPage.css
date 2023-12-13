@@ -1,6 +1,15 @@
+
+
+
 .game-results {
     gap: 25px;
 }
+
+#results-header {
+    display: flex;
+}
+
+
 
 .results-content {
     margin-left: 20px;

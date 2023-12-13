@@ -3,8 +3,23 @@
     gap: 16px;
 }
 
+.tabs .tab-button {
+    width: 80px;
+    text-align: center;
+}
+
+.tabs .tab-button img {
+    margin: auto;
+}
+
+.tabs .tab-button img {
+    max-width: 60px;
+    max-height: 25px;
+    text-align: center;
+}
+
 .tab-button {
-    padding: 10px 20px; 
+    padding: 5px 20px; 
     background-color: #f0f0f0;
     border: none;
     border-radius: 8px;
