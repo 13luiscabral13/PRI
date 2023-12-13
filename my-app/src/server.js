@@ -33,48 +33,69 @@ app.get('/get_games', async (req, res) => {
       'Content-Type': 'application/x-www-form-urlencoded'
     };
 
+    const convertResponse = await axios.post('http://127.0.0.1:5000/api/text_to_embedding', { text: searchText });
+    const embedding = convertResponse.data.result;
+
+    const softSearchData = {
+      q: `{!knn f=vector topK=1200}${embedding}`,
+      fl: "*",
+      rows: 1200,
+      wt: "json"
+    };
+    const softSearchParams = new URLSearchParams(softSearchData);
+
     const hardSearchData = {
-      bq: `{!child of=\"*:* -_nest_path_:*\"}name:(${searchText})^2 OR summary:(${searchText}) OR wikipedia:(${searchText})^2 OR genre:(${searchText})^3`,
+      bq: `{!child of=\"*:* -_nest_path_:*\"}name:(${searchText})^3 OR summary:(${searchText}) OR wikipedia:(${searchText})^2 OR genre:(${searchText})^6`,
       defType: "edismax",
       fl: "*,[child]",
       fq: "{!child of=\"*:* -_nest_path_:*\"}name:*",
       indent: "true",
       'q.op': "OR",
       q: `(${searchText})`,
-      qf: "platform^8 review^2",
+      qf: "platform^11 review^2",
+      ps:3,
+      pf:2,
       rows: 1000,
       useParams: "",
       wt: "json"
-    }
+    };
     const hardSearchParams = new URLSearchParams(hardSearchData);
+
+    //Perform soft search
+    const softSearchResponse = await axios.post(url, softSearchParams.toString(), {
+      headers: headers
+    });
+    const softSearchResponseGames = softSearchResponse.data.response.docs;
+    const softSearchGameIDs = softSearchResponseGames.map(doc => doc.id);
+
+    // Perform hard search
     const response = await axios.post(url, hardSearchParams.toString(), {
       headers: headers
     });
-
     const data = response.data;
     const reviews = data.response.docs;
 
-    let gameids = [];
-    let query = "";
-    for (let index = 0; index < reviews.length; index++) {
-      const doc = reviews[index];
-      if (gameids.length === 30) 
-        break;
-
-      const gameId = doc.id.split('/')[0];
-      if (!gameids.includes(gameId)) {
-        gameids.push(gameId);
-        query += gameId + " ";
-      }
+    const hardSearchGameIDs = [];
+    for (const review of reviews) {
+      const gameId = review.id.split('/')[0];
+      if (!hardSearchGameIDs.includes(gameId))
+        hardSearchGameIDs.push(gameId);
     }
 
+    // Intersect soft and hard search document IDs
+    const intersectIDs = []
+    for (const hardSearchId of hardSearchGameIDs) {
+      if (softSearchGameIDs.includes(hardSearchId)) {
+        intersectIDs.push(hardSearchId);
+        if (intersectIDs.length === 30)
+          break;
+    }
+  }
+
     const searchData = {
-      q: `id:(${query})`,
+      q: "id:(" + intersectIDs.join(" OR ") + ")",
       fl: "*,[child]",
-      indent: "true",
-      'q.op': "OR",
-      rows: 30,
-      useParams: "",
+      rows: intersectIDs.length,
       wt: "json"
     }
     const searchParams = new URLSearchParams(searchData);
