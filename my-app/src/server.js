@@ -34,14 +34,16 @@ app.get('/get_games', async (req, res) => {
     };
 
     const hardSearchData = {
-      bq: `{!child of=\"*:* -_nest_path_:*\"}name:(${searchText})^2 OR summary:(${searchText}) OR wikipedia:(${searchText})^2 OR genre:(${searchText})^3`,
+      bq: `{!child of=\"*:* -_nest_path_:*\"}name:(${searchText})^3 OR summary:(${searchText}) OR wikipedia:(${searchText})^2 OR genre:(${searchText})^6`,
       defType: "edismax",
       fl: "*,[child]",
       fq: "{!child of=\"*:* -_nest_path_:*\"}name:*",
       indent: "true",
       'q.op': "OR",
       q: `(${searchText})`,
-      qf: "platform^8 review^2",
+      qf: "platform^11 review^2",
+      ps:3,
+      pf:2,
       rows: 1000,
       useParams: "",
       wt: "json"

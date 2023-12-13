@@ -76,15 +76,21 @@ const ResultsPage = () => {
 
   return (
     <div className='results-content'>
+      <SmallSearchBar/>
       <span className='results-header'>
-        <div>
-          <p>You search for: <strong>{searchText}</strong></p>
+          <div className='first-div'>
+          <div>
+          <p>Your search for: <strong>{searchText}</strong></p>
           <p>Returned {searchResults.length} results.</p>
           <p>Here they are:</p>
+          </div>
+          <div>
+            <button type="submit" className="search-button" onClick={handleMoreLikeThisSearchSubmit}>
+            More Like This
+            </button>
+          </div>
         </div>
-        <button type="submit" className="search-button" onClick={handleMoreLikeThisSearchSubmit}>
-          Search More Like This
-        </button>
+
       </span>
       <div className='game-results'>
         {searchResults.map((result) => (

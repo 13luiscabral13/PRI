@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-
-=======
 .results-header {
     display: flex;
     justify-content: space-between;
@@ -11,7 +7,27 @@
 .results-header button {
     margin-bottom: 1.5em;
 }
->>>>>>> c56f2d0118aed90048fb095e94d3f0d654d0e3bb
+
+.results-header .first-div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.results-header .first-div button {
+    margin-top:15px;
+    padding: 5px 20px; 
+    background-color: #f0f0f0;
+    border: 2px solid rgb(206, 206, 206);
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.results-header .first-div button:hover {
+    background-color: #90c0ec; 
+    border:2px solid white;
+}
 
 .game-results {
     gap: 25px;
