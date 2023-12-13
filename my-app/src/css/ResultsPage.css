@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 
 
+=======
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.results-header button {
+    margin-bottom: 1.5em;
+}
+>>>>>>> c56f2d0118aed90048fb095e94d3f0d654d0e3bb
 
 .game-results {
     gap: 25px;

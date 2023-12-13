@@ -18,9 +18,9 @@ def solr_query(endpoint, collection, embedding, query_text):
     
     # Perform soft search
     soft_search_data = {
-        "q": f"{{!knn f=vector topK=30}}{embedding}",
+        "q": f"{{!knn f=vector topK=500}}{embedding}",
         "fl": "*",
-        "rows": 30,
+        "rows": 500,
         "wt": "json"
     }
 
@@ -35,18 +35,18 @@ def solr_query(endpoint, collection, embedding, query_text):
     # Perform hard search
     hard_search_data = {
         "bq": "{!child of=\"*:* -_nest_path_:*\"}",
-        "bqName": f"name:({query_text})^2",
+        "bqName": f"name:({query_text})^3",
         "bqSummary": f"summary:({query_text})",
         "bqWikipedia": f"wikipedia:({query_text})^2",
-        "bqGenre": f"genre:({query_text})^3",
+        "bqGenre": f"genre:({query_text})^6",
         "defType": "edismax",
         "fl": "*,[child]",
         "fq": "{!child of=\"*:* -_nest_path_:*\"}name:*",
         "indent": "true",
         "q.op": "OR",
         "q": f"({query_text})",
-        "qf": "platform^8 review^2",
-        "rows": 30,   #TODO: confirm
+        "qf": "platform^11 review^2",
+        "rows": 1000,   
         "useParams": "",
         "wt": "json"
     }
@@ -57,10 +57,20 @@ def solr_query(endpoint, collection, embedding, query_text):
     # Save IDs of hard search 
     hard_search_results = response_hard_search.json()
     hard_search_doc_ids = [doc['id'].split('/')[0] for doc in hard_search_results['response']['docs']]
+    # Get unique IDs
+    hard_search_unique_doc_ids = []
+    for id in hard_search_doc_ids:
+        if id not in hard_search_unique_doc_ids:
+            hard_search_unique_doc_ids.append(id)
     
-    
-    # Perform final query to get documents returned on both stages 
-    intersected_doc_ids = set(soft_search_doc_ids) & set(hard_search_doc_ids)
+    # Perform final query to get documents returned on both stages
+    intersected_doc_ids = []
+    for hard_search_id in hard_search_unique_doc_ids:
+        if hard_search_id in soft_search_doc_ids:
+            intersected_doc_ids.append(hard_search_id)
+
+            if len(intersected_doc_ids) == 30:
+                break
     
     final_query_data = {
         "q": "id:(" + " OR ".join(intersected_doc_ids) + ")",
