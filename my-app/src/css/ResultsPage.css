@@ -8,9 +8,36 @@
     margin-bottom: 1.5em;
 }
 
+.results-header .first-div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.results-header .first-div button {
+    margin-top:15px;
+    padding: 5px 20px; 
+    background-color: #f0f0f0;
+    border: 2px solid rgb(206, 206, 206);
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.results-header .first-div button:hover {
+    background-color: #90c0ec; 
+    border:2px solid white;
+}
+
 .game-results {
     gap: 25px;
 }
+
+#results-header {
+    display: flex;
+}
+
+
 
 .results-content {
     margin-left: 20px;

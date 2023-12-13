@@ -2,3 +2,8 @@
     max-width: 250px;
     margin-top: 150px;
 }
+
+#initialLogoBottom {
+    max-width: 550px;
+    margin: 0;
+}

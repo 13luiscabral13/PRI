@@ -1,6 +1,7 @@
 .game-card {
     border: 1px solid #ddd;
     padding: 10px;
+    padding-top: 0px;
     margin-bottom: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -58,7 +59,7 @@
 }
   
 .summary {
-    max-height: 90px; /* Altura máxima antes de ser truncado */
+    max-height: 85px; /* Altura máxima antes de ser truncado */
     overflow: hidden;
 }
   
@@ -72,3 +73,9 @@
     max-height: none;
 }
   
+#more-info {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+

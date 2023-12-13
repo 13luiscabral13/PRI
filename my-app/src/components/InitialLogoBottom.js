@@ -1,6 +1,5 @@
 import React from 'react';
 import initialLogoBottom from '../images/initialLogoBottom.png';
-import '../css/InitialLogoBottom.css';
 const InitialLogoBottom = () => {
   
   return (

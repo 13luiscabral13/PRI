@@ -4,12 +4,16 @@
 }
 
 .tab-button {
-    padding: 10px 20px; 
+    padding: 5px 10px; 
     background-color: #f0f0f0;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     text-align: left;
+}
+
+.tabs-info .tab-button img {
+    max-width: 30px;
 }
 
 .tab-button.active {

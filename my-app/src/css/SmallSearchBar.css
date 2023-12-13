@@ -1,0 +1,19 @@
+.small-search-bar {
+    margin-top: 10px;
+    display:flex;
+    margin-bottom: 5px;
+}
+
+.small-search-bar  #initialLogoTop {
+    max-width: 50px;
+    margin-top: 0px;
+}
+.small-search-bar .search-bar {
+    margin-left: 20px;
+    justify-content: left;
+    width: 100%;
+}
+
+.small-search-bar .search-bar .search-input {
+    width: 100%;
+}
